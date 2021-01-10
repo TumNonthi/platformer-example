@@ -1,0 +1,3236 @@
+fileFormatVersion: 2
+guid: ee7779eb18bbb492f9ec4717ea64cf4c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -416490916945750140
+    second: mami_idle_0
+  - first:
+      213: -6155020204759275803
+    second: mami_idle_1
+  - first:
+      213: -5103545073894062998
+    second: mami_idle_2
+  - first:
+      213: 4795966992134686618
+    second: mami_idle_3
+  - first:
+      213: -9168289936752801516
+    second: mami_idle_4
+  - first:
+      213: -655489081953673720
+    second: mami_idle_5
+  - first:
+      213: -5857424655716146037
+    second: mami_idle_6
+  - first:
+      213: -4857326098324521117
+    second: mami_run_0
+  - first:
+      213: -2847088035224439239
+    second: mami_run_1
+  - first:
+      213: 9119784482964505082
+    second: mami_run_2
+  - first:
+      213: -4234621564621689532
+    second: mami_run_3
+  - first:
+      213: -945820343597270056
+    second: mami_run_4
+  - first:
+      213: 7318876752658710760
+    second: mami_run_5
+  - first:
+      213: -1147620865921229210
+    second: mami_run_6
+  - first:
+      213: 1967896666539328834
+    second: mami_run_7
+  - first:
+      213: 3377721604063078202
+    second: mami_jump_0
+  - first:
+      213: -6871348385675766586
+    second: mami_jump_1
+  - first:
+      213: 2679256386502378009
+    second: mami_jump_2
+  - first:
+      213: -5843527941375031241
+    second: mami_jump_3
+  - first:
+      213: 1799385074456622291
+    second: mami_jump_4
+  - first:
+      213: -4510111259243007978
+    second: mami_jump_5
+  - first:
+      213: -5625619978451103251
+    second: mami_jump_6
+  - first:
+      213: 3562944412530064001
+    second: mami_jump_7
+  - first:
+      213: 5813346432523724116
+    second: mami_fall_0
+  - first:
+      213: -2900095984506262770
+    second: mami_fall_1
+  - first:
+      213: 6651944538333582612
+    second: mami_fall_2
+  - first:
+      213: -7304543481440605494
+    second: mami_jump_fwd_0
+  - first:
+      213: -3050966732187970173
+    second: mami_jump_fwd_1
+  - first:
+      213: 7721218773989343728
+    second: mami_jump_fwd_2
+  - first:
+      213: -3333231121152198143
+    second: mami_jump_fwd_3
+  - first:
+      213: 3002278585890890437
+    second: mami_jump_fwd_4
+  - first:
+      213: -7794573939672054991
+    second: mami_jump_fwd_5
+  - first:
+      213: -5602317027974024008
+    second: mami_jump_fwd_6
+  - first:
+      213: -7423716301047976740
+    second: mami_jump_fwd_7
+  - first:
+      213: -688169404108365052
+    second: mami_jump_fwd_8
+  - first:
+      213: -2863985718141607979
+    second: mami_jump_fwd_9
+  - first:
+      213: -3036538658086851260
+    second: mami_jump_fwd_10
+  - first:
+      213: 799380506031451174
+    second: mami_attack_0
+  - first:
+      213: 6442786111583078443
+    second: mami_attack_1
+  - first:
+      213: 7279664053275515020
+    second: mami_attack_2
+  - first:
+      213: -4842418147433081405
+    second: mami_attack_3
+  - first:
+      213: 8725094364155574248
+    second: mami_attack_4
+  - first:
+      213: -3470253501422412509
+    second: mami_attack_5
+  - first:
+      213: -465414030369493619
+    second: mami_attack_6
+  - first:
+      213: -6597138289303896804
+    second: mami_attack_7
+  - first:
+      213: -4222725374221039360
+    second: mami_attack_8
+  - first:
+      213: 2281791452500849448
+    second: mami_attack_9
+  - first:
+      213: 998387471391833896
+    second: mami_attack_10
+  - first:
+      213: 4526565014141265156
+    second: mami_attack_11
+  - first:
+      213: -1271242606122858278
+    second: mami_musket
+  - first:
+      213: 2148907555713290615
+    second: mami_hurt_0
+  - first:
+      213: 8627201841758397215
+    second: mami_hurt_1
+  - first:
+      213: 713382360382351172
+    second: mami_hurt_2
+  - first:
+      213: 1380061636027091058
+    second: mami_hurt_3
+  - first:
+      213: -6912330373719670401
+    second: mami_hurt_4
+  - first:
+      213: 6085182795208149948
+    second: mami_attack_rapid_0
+  - first:
+      213: -2488303434603860833
+    second: mami_attack_rapid_1
+  - first:
+      213: 8323690961073334989
+    second: mami_attack_rapid_2
+  - first:
+      213: 8592847330933875286
+    second: mami_attack_rapid_3
+  - first:
+      213: -5215338176184194877
+    second: mami_attack_rapid_4
+  - first:
+      213: 3423842230909588089
+    second: mami_attack_rapid_5
+  - first:
+      213: 8312284543185871301
+    second: mami_attack_rapid_6
+  - first:
+      213: 2770714972809921935
+    second: mami_attack_rapid_7
+  - first:
+      213: 1351325105361837076
+    second: mami_attack_rapid_8
+  - first:
+      213: 1174863870046042179
+    second: mami_attack_rapid_9
+  - first:
+      213: 6379252758882699707
+    second: mami_attack_rapid_10
+  - first:
+      213: -8008859202347782741
+    second: mami_attack_rapid_11
+  - first:
+      213: 6831682002523269734
+    second: mami_attack_rapid_12
+  - first:
+      213: -8537986758291480956
+    second: mami_attack_rapid_13
+  - first:
+      213: 2839482753979372045
+    second: mami_attack_rapid_14
+  - first:
+      213: 3230114854522198695
+    second: mami_attack_rapid_15
+  - first:
+      213: -7966725803900690583
+    second: mami_attack_rapid_16
+  - first:
+      213: -7131032732283964361
+    second: mami_attack_rapid_17
+  - first:
+      213: 4261271434904250105
+    second: muskets_group_0
+  - first:
+      213: 6283994850658289243
+    second: muskets_group_1
+  - first:
+      213: 3979310276076764065
+    second: muskets_group_2
+  - first:
+      213: -2646734192233917498
+    second: muskets_group_3
+  - first:
+      213: 5192246006172729738
+    second: muskets_group_4
+  - first:
+      213: 7835779838087132748
+    second: muskets_group_5
+  - first:
+      213: -5205336600316526453
+    second: muskets_group_6
+  - first:
+      213: 4648246823000565184
+    second: muskets_group_7
+  - first:
+      213: 7107115407246705490
+    second: muskets_group_8
+  - first:
+      213: -5424814275999289220
+    second: muskets_group_9
+  - first:
+      213: 9103964411378153275
+    second: mami_air_attack_0
+  - first:
+      213: 4970447060982989409
+    second: mami_air_attack_1
+  - first:
+      213: 1571939540621130632
+    second: mami_air_attack_2
+  - first:
+      213: 3567534999593933926
+    second: mami_air_attack_3
+  - first:
+      213: 2564555787983780935
+    second: mami_air_attack_4
+  - first:
+      213: 7227766169577738264
+    second: mami_air_attack_5
+  - first:
+      213: 2363071720884848852
+    second: mami_air_attack_6
+  - first:
+      213: 3441661755088779380
+    second: mami_air_attack_7
+  - first:
+      213: 5818736740312776323
+    second: mami_air_attack_8
+  - first:
+      213: 7776486896235147864
+    second: mami_air_attack_9
+  - first:
+      213: -3781345984850016670
+    second: mami_air_attack_10
+  - first:
+      213: -470170866153435298
+    second: mami_air_attack_11
+  - first:
+      213: -5642104040054432570
+    second: mami_barrage_0
+  - first:
+      213: -277042973900756474
+    second: mami_barrage_1
+  - first:
+      213: 6063948598819107682
+    second: mami_barrage_2
+  - first:
+      213: 1947814506411616110
+    second: mami_barrage_3
+  - first:
+      213: 7997709398555833580
+    second: mami_barrage_4
+  - first:
+      213: 4731748848254397002
+    second: mami_barrage_5
+  - first:
+      213: 4948084234379459857
+    second: mami_tiro_0
+  - first:
+      213: 8823234369487001679
+    second: mami_tiro_1
+  - first:
+      213: -2957927226929794470
+    second: mami_tiro_2
+  - first:
+      213: 2090409187394196992
+    second: mami_tiro_3
+  - first:
+      213: -9119117573300772297
+    second: mami_tiro_4
+  - first:
+      213: 9220248960007590248
+    second: mami_tiro_5
+  - first:
+      213: 6354032089986212022
+    second: mami_tiro_6
+  - first:
+      213: 3610625200084213513
+    second: mami_tiro_7
+  - first:
+      213: -7644251644880552722
+    second: mami_tiro_8
+  - first:
+      213: -1125885436076890690
+    second: mami_tiro_9
+  - first:
+      213: -2227309649082693734
+    second: mami_tiro_10
+  - first:
+      213: 5124803255929909368
+    second: mami_tiro_11
+  - first:
+      213: -5545159295408186325
+    second: mami_tiro_12
+  - first:
+      213: 2776375820367221047
+    second: tiro_barrel
+  - first:
+      213: 5149782809413302726
+    second: tiro_hammer
+  - first:
+      213: -5624565197720406654
+    second: mami_dead_0
+  - first:
+      213: 1445986357460109178
+    second: mami_dead_1
+  - first:
+      213: 3470136697588340938
+    second: mami_dead_2
+  - first:
+      213: 8949189583077465091
+    second: mami_dead_3
+  - first:
+      213: 8063721023015446803
+    second: mami_dead_4
+  - first:
+      213: -4961749707753126205
+    second: mami_dead_5
+  - first:
+      213: 4675232195871492154
+    second: mami_dead_6
+  - first:
+      213: -7726943632692477897
+    second: mami_dead_7
+  - first:
+      213: -2655204842395153192
+    second: mami_dead_8
+  - first:
+      213: 5506751370290135410
+    second: mami_dead_9
+  - first:
+      213: 5161858907417440385
+    second: mami_dead_10
+  - first:
+      213: 2553172009306259157
+    second: mami_dead_11
+  - first:
+      213: -1487652669147999439
+    second: mami_dead_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 2
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mami_idle_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2677
+        width: 63
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5, y: 0.042016808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487954bb7b3583af0800000000000000
+      internalID: -416490916945750140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_idle_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 2677
+        width: 63
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5, y: 0.042016808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6a8f50cb9f49aa0800000000000000
+      internalID: -6155020204759275803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_idle_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 2677
+        width: 63
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5, y: 0.042016808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6489578bc09c29b0800000000000000
+      internalID: -5103545073894062998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_idle_3
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 2677
+        width: 63
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5, y: 0.042016808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97cfa8b192be8240800000000000000
+      internalID: 4795966992134686618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_idle_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 2677
+        width: 63
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5, y: 0.042016808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4198f02d0e0b3c080800000000000000
+      internalID: -9168289936752801516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_idle_5
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 2677
+        width: 63
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5, y: 0.042016808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e1104272c37e6f0800000000000000
+      internalID: -655489081953673720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_idle_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 2677
+        width: 63
+        height: 119
+      alignment: 9
+      pivot: {x: 0.5, y: 0.042016808}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84ac614f4f36bea0800000000000000
+      internalID: -5857424655716146037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_run_0
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 2677
+        width: 70
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5, y: 0.027272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ff12716af479cb0800000000000000
+      internalID: -4857326098324521117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_run_1
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 2677
+        width: 70
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5, y: 0.027272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936be28348c1d78d0800000000000000
+      internalID: -2847088035224439239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_run_2
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 2677
+        width: 70
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5, y: 0.027272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af108372babff8e70800000000000000
+      internalID: 9119784482964505082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_run_3
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 2677
+        width: 70
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5, y: 0.027272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44de38a7f1a9b35c0800000000000000
+      internalID: -4234621564621689532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_run_4
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 2677
+        width: 70
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5, y: 0.027272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dbfb8e9865cfd2f0800000000000000
+      internalID: -945820343597270056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_run_5
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 2677
+        width: 70
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5, y: 0.027272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e0461521afd19560800000000000000
+      internalID: 7318876752658710760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_run_6
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 2677
+        width: 70
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5, y: 0.027272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e50fd17e4d210f0800000000000000
+      internalID: -1147620865921229210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_run_7
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 2677
+        width: 70
+        height: 110
+      alignment: 9
+      pivot: {x: 0.5, y: 0.027272727}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24580c3879f5f4b10800000000000000
+      internalID: 1967896666539328834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_0
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37a75827e310ee20800000000000000
+      internalID: 3377721604063078202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_1
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c497d79c0114a0a0800000000000000
+      internalID: -6871348385675766586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_2
+      rect:
+        serializedVersion: 2
+        x: 1193
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 912cbabfc71ae2520800000000000000
+      internalID: 2679256386502378009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_3
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73885433c4e97eea0800000000000000
+      internalID: -5843527941375031241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_4
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d470211133b8f810800000000000000
+      internalID: 1799385074456622291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_5
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610b45f84bdd861c0800000000000000
+      internalID: -4510111259243007978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_6
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1d4177f68cde1b0800000000000000
+      internalID: -5625619978451103251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_7
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a315fd01f127130800000000000000
+      internalID: 3562944412530064001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_fall_0
+      rect:
+        serializedVersion: 2
+        x: 1721
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4556cdaa7c72da050800000000000000
+      internalID: 5813346432523724116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_fall_1
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0ba7f4411ac0c7d0800000000000000
+      internalID: -2900095984506262770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_fall_2
+      rect:
+        serializedVersion: 2
+        x: 1897
+        y: 2677
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09448819}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41519f86054705c50800000000000000
+      internalID: 6651944538333582612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca665e976c01aa90800000000000000
+      internalID: -7304543481440605494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_1
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385d66afbe9c8a5d0800000000000000
+      internalID: -3050966732187970173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_2
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f146b0f097472b60800000000000000
+      internalID: 7721218773989343728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_3
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a327d94fbfdb1d0800000000000000
+      internalID: -3333231121152198143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_4
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2e9c4977c3aa920800000000000000
+      internalID: 3002278585890890437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_5
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133845e9c4c14d390800000000000000
+      internalID: -7794573939672054991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_6
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b47c7c68529042b0800000000000000
+      internalID: -5602317027974024008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_7
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc22c25b59a9f890800000000000000
+      internalID: -7423716301047976740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_8
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40324d2b2912376f0800000000000000
+      internalID: -688169404108365052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_9
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5df9064d9241148d0800000000000000
+      internalID: -2863985718141607979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_jump_fwd_10
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 2537
+        width: 109
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.09375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44dedf1cd2c0cd5d0800000000000000
+      internalID: -3036538658086851260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_0
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c606eb558f71b00800000000000000
+      internalID: 799380506031451174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_1
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28cab845df596950800000000000000
+      internalID: 6442786111583078443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_2
+      rect:
+        serializedVersion: 2
+        x: 1433
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88daab13ef860560800000000000000
+      internalID: 7279664053275515020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_3
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c59854e9564cccb0800000000000000
+      internalID: -4842418147433081405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_4
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e7714fb813c51970800000000000000
+      internalID: 8725094364155574248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_5
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d592f93de27dfc0800000000000000
+      internalID: -3470253501422412509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_6
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8de75eb7648a89f0800000000000000
+      internalID: -465414030369493619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_7
+      rect:
+        serializedVersion: 2
+        x: 1988
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1db9e3dda14274a0800000000000000
+      internalID: -6597138289303896804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_8
+      rect:
+        serializedVersion: 2
+        x: 2099
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009c68525add565c0800000000000000
+      internalID: -4222725374221039360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_9
+      rect:
+        serializedVersion: 2
+        x: 2210
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823f5d19c3d8aaf10800000000000000
+      internalID: 2281791452500849448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_10
+      rect:
+        serializedVersion: 2
+        x: 2321
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82fb2849d1cfadd00800000000000000
+      internalID: 998387471391833896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_11
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: 0.0234375}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405e998c5e691de30800000000000000
+      internalID: 4526565014141265156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_musket
+      rect:
+        serializedVersion: 2
+        x: 2543
+        y: 2537
+        width: 110
+        height: 128
+      alignment: 9
+      pivot: {x: 0.34545454, y: 0.6015625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad884b6c593ab5ee0800000000000000
+      internalID: -1271242606122858278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_hurt_0
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1013
+        width: 125
+        height: 122
+      alignment: 9
+      pivot: {x: 0.528, y: 0.07377049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7719179590472dd10800000000000000
+      internalID: 2148907555713290615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_hurt_1
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 1013
+        width: 125
+        height: 122
+      alignment: 9
+      pivot: {x: 0.528, y: 0.07377049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13ea9fbd5af9b770800000000000000
+      internalID: 8627201841758397215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_hurt_2
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1013
+        width: 125
+        height: 122
+      alignment: 9
+      pivot: {x: 0.528, y: 0.07377049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447ae932a7176e900800000000000000
+      internalID: 713382360382351172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_hurt_3
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 1013
+        width: 125
+        height: 122
+      alignment: 9
+      pivot: {x: 0.528, y: 0.07377049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2780a8ffeb6f62310800000000000000
+      internalID: 1380061636027091058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_hurt_4
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 1013
+        width: 125
+        height: 122
+      alignment: 9
+      pivot: {x: 0.528, y: 0.07377049}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71cb40f5287210a0800000000000000
+      internalID: -6912330373719670401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb43b5f289e27450800000000000000
+      internalID: 6085182795208149948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_1
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c6d07b535c77dd0800000000000000
+      internalID: -2488303434603860833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_2
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcae7ea04d0b38370800000000000000
+      internalID: 8323690961073334989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_3
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6522a71ee1def3770800000000000000
+      internalID: 8592847330933875286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_4
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8e1019f856f97b0800000000000000
+      internalID: -5215338176184194877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_5
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972d8546e5ee38f20800000000000000
+      internalID: 3423842230909588089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_6
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1609c60ca2b5370800000000000000
+      internalID: 8312284543185871301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_7
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f850130869e837620800000000000000
+      internalID: 2770714972809921935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_8
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41cd821160fd0c210800000000000000
+      internalID: 1351325105361837076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_9
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 348f8811774fd4010800000000000000
+      internalID: 1174863870046042179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_10
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb942a1e598a78850800000000000000
+      internalID: 6379252758882699707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_11
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad21fbfcf0dad090800000000000000
+      internalID: -8008859202347782741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_12
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a24d2e5920fce50800000000000000
+      internalID: 6831682002523269734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_13
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e1c0f874af28980800000000000000
+      internalID: -8537986758291480956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_14
+      rect:
+        serializedVersion: 2
+        x: 1919
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02d9c0458ed76720800000000000000
+      internalID: 2839482753979372045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_15
+      rect:
+        serializedVersion: 2
+        x: 2056
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa1287a85ca3dc20800000000000000
+      internalID: 3230114854522198695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_16
+      rect:
+        serializedVersion: 2
+        x: 2193
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f9f834711807190800000000000000
+      internalID: -7966725803900690583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_attack_rapid_17
+      rect:
+        serializedVersion: 2
+        x: 2330
+        y: 2390
+        width: 136
+        height: 135
+      alignment: 9
+      pivot: {x: 0.38235295, y: 0.022222223}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734f786038b790d90800000000000000
+      internalID: -7131032732283964361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muskets_group_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2296
+        width: 134
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6acf8fac3132b30800000000000000
+      internalID: 4261271434904250105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muskets_group_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 2296
+        width: 134
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b560fdbc50c353750800000000000000
+      internalID: 6283994850658289243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muskets_group_2
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 2296
+        width: 134
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1abfd90ec99593730800000000000000
+      internalID: 3979310276076764065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muskets_group_3
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 2296
+        width: 134
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c354017649e44bd0800000000000000
+      internalID: -2646734192233917498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muskets_group_4
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 2296
+        width: 134
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81cd50ab309e0840800000000000000
+      internalID: 5192246006172729738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muskets_group_5
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 2296
+        width: 134
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46f95b3f384ebc60800000000000000
+      internalID: 7835779838087132748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muskets_group_6
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 2296
+        width: 134
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b804bc9e0fde2c7b0800000000000000
+      internalID: -5205336600316526453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muskets_group_7
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 2296
+        width: 134
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c56949abd3e18040800000000000000
+      internalID: 4648246823000565184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muskets_group_8
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 2296
+        width: 134
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25345aacecb81a260800000000000000
+      internalID: 7107115407246705490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: muskets_group_9
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 2296
+        width: 134
+        height: 93
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c70389a682037b4b0800000000000000
+      internalID: -5424814275999289220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b373ef3b567c75e70800000000000000
+      internalID: 9103964411378153275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16286c474439af440800000000000000
+      internalID: 4970447060982989409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_2
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88bfc170fa6a0d510800000000000000
+      internalID: 1571939540621130632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_3
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66cd1963e2e628130800000000000000
+      internalID: 3567534999593933926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_4
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cf17dc6e1279320800000000000000
+      internalID: 2564555787983780935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_5
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8105441790f2e4460800000000000000
+      internalID: 7227766169577738264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_6
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8cc16c5315bc020800000000000000
+      internalID: 2363071720884848852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_7
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4783d1da12d33cf20800000000000000
+      internalID: 3441661755088779380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_8
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38e7bdf7c3e40c050800000000000000
+      internalID: 5818736740312776323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_9
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852739a61a1abeb60800000000000000
+      internalID: 7776486896235147864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_10
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2664a287cd5f58bc0800000000000000
+      internalID: -3781345984850016670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_air_attack_11
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 2154
+        width: 110
+        height: 130
+      alignment: 9
+      pivot: {x: 0.5, y: 0.046153847}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5fcf2b961e9979f0800000000000000
+      internalID: -470170866153435298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_barrage_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1756
+        width: 81
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04918033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc52cac44833b1b0800000000000000
+      internalID: -5642104040054432570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_barrage_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1756
+        width: 81
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04918033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60aa02112eeb72cf0800000000000000
+      internalID: -277042973900756474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_barrage_2
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1756
+        width: 81
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04918033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26337d85f19772450800000000000000
+      internalID: 6063948598819107682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_barrage_3
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 1756
+        width: 81
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04918033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e67640f39f6080b10800000000000000
+      internalID: 1947814506411616110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_barrage_4
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 1756
+        width: 81
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04918033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce439b503529dfe60800000000000000
+      internalID: 7997709398555833580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_barrage_5
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 1756
+        width: 81
+        height: 122
+      alignment: 9
+      pivot: {x: 0.5, y: 0.04918033}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a2192f18c8aa140800000000000000
+      internalID: 4731748848254397002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_0
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1756
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.023622047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11df5e425602ba440800000000000000
+      internalID: 4948084234379459857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_1
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 1756
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.023622047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f485a4b59ec627a70800000000000000
+      internalID: 8823234369487001679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_2
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1756
+        width: 87
+        height: 127
+      alignment: 9
+      pivot: {x: 0.5, y: 0.023622047}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52b46fdbd453f6d0800000000000000
+      internalID: -2957927226929794470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_3
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 1754
+        width: 89
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00618d99410a20d10800000000000000
+      internalID: 2090409187394196992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_4
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1754
+        width: 89
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732a26ad1e2627180800000000000000
+      internalID: -9119117573300772297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_5
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 1754
+        width: 89
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861dae10497e4ff70800000000000000
+      internalID: 9220248960007590248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_6
+      rect:
+        serializedVersion: 2
+        x: 1027
+        y: 1754
+        width: 89
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0af0f458e0e2850800000000000000
+      internalID: 6354032089986212022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_7
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1754
+        width: 89
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fd7145d748b1230800000000000000
+      internalID: 3610625200084213513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_8
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 1754
+        width: 89
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecf23541a92ae590800000000000000
+      internalID: -7644251644880552722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_9
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1754
+        width: 89
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5e9dc392d0060f0800000000000000
+      internalID: -1125885436076890690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_10
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 1754
+        width: 89
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9740a9cca10711e0800000000000000
+      internalID: -2227309649082693734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_11
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 1754
+        width: 89
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870b77da865fe1740800000000000000
+      internalID: 5124803255929909368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_tiro_12
+      rect:
+        serializedVersion: 2
+        x: 1567
+        y: 1754
+        width: 89
+        height: 132
+      alignment: 9
+      pivot: {x: 0.5, y: 0.022727273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c5d361003ab03b0800000000000000
+      internalID: -5545159295408186325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiro_barrel
+      rect:
+        serializedVersion: 2
+        x: 1657
+        y: 1754
+        width: 512
+        height: 200
+      alignment: 9
+      pivot: {x: 0.24804688, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 731d8f7491ba78620800000000000000
+      internalID: 2776375820367221047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tiro_hammer
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 1762
+        width: 64
+        height: 192
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.4166667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c93e713e24b77740800000000000000
+      internalID: 5149782809413302726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285b9ddb0c781f1b0800000000000000
+      internalID: -5624565197720406654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_1
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7788725eec211410800000000000000
+      internalID: 1445986357460109178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8dccdd0f6682030800000000000000
+      internalID: 3470136697588340938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_3
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c55fec288e13c70800000000000000
+      internalID: 8949189583077465091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_4
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3196fa80c8718ef60800000000000000
+      internalID: 8063721023015446803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_5
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c60af4ede2542bb0800000000000000
+      internalID: -4961749707753126205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_6
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38c36569e2c1e040800000000000000
+      internalID: 4675232195871492154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_7
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73006e584b164c490800000000000000
+      internalID: -7726943632692477897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_8
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcc3238341d62bd0800000000000000
+      internalID: -2655204842395153192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_9
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2710a8cf139eb6c40800000000000000
+      internalID: 5506751370290135410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_10
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1807d4dd35b92a740800000000000000
+      internalID: 5161858907417440385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_11
+      rect:
+        serializedVersion: 2
+        x: 1453
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de7b294a60be6320800000000000000
+      internalID: 2553172009306259157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mami_dead_12
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 872
+        width: 131
+        height: 131
+      alignment: 9
+      pivot: {x: 0.7633588, y: 0.16793893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133954287cbca5be0800000000000000
+      internalID: -1487652669147999439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
