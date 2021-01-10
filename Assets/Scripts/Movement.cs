@@ -12,6 +12,8 @@ namespace MyPlatformer
 
         private Rigidbody2D rb;
 
+        [SerializeField] private PlayerAnimation playerAnimation;
+
         private void Start()
         {
             TryGetComponent(out rb);
@@ -20,11 +22,20 @@ namespace MyPlatformer
         private void Update()
         {
             Walk(horizontalIntent);
+
+            if (horizontalIntent > 0f)
+            {
+                playerAnimation.Flip(1);
+            }
+            else if (horizontalIntent < 0f)
+            {
+                playerAnimation.Flip(-1);
+            }
         }
 
         public void Walk(float direction)
         {
-            rb.velocity = new Vector2(direction * speed, 0f);
+            rb.velocity = new Vector2(direction * speed, rb.velocity.y);
         }
     }
 }
