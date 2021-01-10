@@ -8,8 +8,7 @@ namespace MyPlatformer
     public class PlayerBrain : MonoBehaviour
     {
         [SerializeField] private PlayerControls _playerControls;
-
-        private float _moveHorizontal;
+        [SerializeField] private Movement _movement;
 
         private void Awake()
         {
@@ -29,7 +28,7 @@ namespace MyPlatformer
         // Update is called once per frame
         void Update()
         {
-            _moveHorizontal = _playerControls.Player.Move.ReadValue<float>();
+            _movement.horizontalIntent = _playerControls.Player.Move.ReadValue<float>();
         }
     }
 }

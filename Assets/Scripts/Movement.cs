@@ -6,9 +6,25 @@ namespace MyPlatformer
 {
     public class Movement : MonoBehaviour
     {
-        public void Move(Vector2 displacement)
+        [SerializeField] private float speed = 10f;
+
+        public float horizontalIntent = 0f;
+
+        private Rigidbody2D rb;
+
+        private void Start()
         {
-            transform.Translate(displacement);
+            TryGetComponent(out rb);
+        }
+
+        private void Update()
+        {
+            Walk(horizontalIntent);
+        }
+
+        public void Walk(float direction)
+        {
+            rb.velocity = new Vector2(direction * speed, 0f);
         }
     }
 }
