@@ -22,9 +22,8 @@ namespace MyPlatformer
         private bool jumpQueued = false;
         private bool jumpCanceled = false;
         private float jumpTimer = 0f;
-        private bool canJump = false;
         private bool isJumping = false;
-        private bool wasGrounded = false;
+        private bool canJump = false;
 
         private void Start()
         {
@@ -60,18 +59,20 @@ namespace MyPlatformer
 
         void CheckGrounded()
         {
+            if (rb.velocity.y <= 0f)
+            {
+                isJumping = false;
+            }
+
             if (characterCollision.OnGround)
             {
-                if (!wasGrounded)
+                if (!isJumping)
                 {
-                    wasGrounded = true;
-                    isJumping = false;
                     canJump = true;
                 }
             }
             else
             {
-                wasGrounded = false;
                 canJump = false;
             }
         }
@@ -83,10 +84,10 @@ namespace MyPlatformer
 
         void Jump(Vector2 dir)
         {
-            canJump = false;
             jumpCanceled = false;
             jumpTimer = 0f;
             isJumping = true;
+            canJump = false;
 
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.velocity += dir * jumpForce;
