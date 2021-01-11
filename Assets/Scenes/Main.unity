@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 677886105}
   - component: {fileID: 677886104}
   - component: {fileID: 677886106}
+  - component: {fileID: 677886107}
   m_Layer: 6
   m_Name: GroundTileMap
   m_TagString: Untagged
@@ -862,6 +863,27 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!50 &677886107
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 677886102}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &722614214
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +964,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: ab3537d30b92dae41bb19f33ec29aaf8, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -961,8 +983,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  horizontalIntent: 0
+  jumpForce: 12
   playerAnimation: {fileID: 513531190}
+  characterCollision: {fileID: 722614220}
+  horizontalIntent: 0
 --- !u!114 &722614220
 MonoBehaviour:
   m_ObjectHideFlags: 0

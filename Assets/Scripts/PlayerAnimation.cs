@@ -11,6 +11,7 @@ namespace MyPlatformer
         [SerializeField] CharacterCollision _characterCollision;
         [SerializeField] string idleName = "Idle";
         [SerializeField] string runName = "Run";
+        [SerializeField] string airName = "Air";
 
         // Start is called before the first frame update
         void Start()
@@ -42,6 +43,10 @@ namespace MyPlatformer
                 {
                     PlayAnimIfNotAlreadyPlaying(idleName);
                 }
+            }
+            else
+            {
+                PlayAnimIfNotAlreadyPlaying(airName);
             }
         }
 

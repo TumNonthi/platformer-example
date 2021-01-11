@@ -17,11 +17,13 @@ namespace MyPlatformer
 
         private void OnEnable()
         {
+            _playerControls.Player.Jump.performed += HandleJump;
             _playerControls.Enable();
         }
 
         private void OnDisable()
         {
+            _playerControls.Player.Jump.performed -= HandleJump;
             _playerControls.Disable();
         }
 
@@ -29,6 +31,11 @@ namespace MyPlatformer
         void Update()
         {
             _movement.horizontalIntent = _playerControls.Player.Move.ReadValue<float>();
+        }
+
+        void HandleJump(InputAction.CallbackContext context)
+        {
+            _movement.QueueJump();
         }
     }
 }
