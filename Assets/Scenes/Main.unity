@@ -1035,6 +1035,7 @@ MonoBehaviour:
   jumpForce: 12
   cancelJumpMult: 0
   jumpMinTime: 0.1
+  jumpBufferTime: 0.2
   playerAnimation: {fileID: 513531190}
   characterCollision: {fileID: 722614220}
   horizontalIntent: 0

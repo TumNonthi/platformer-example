@@ -10,6 +10,7 @@ namespace MyPlatformer
         [SerializeField] private float jumpForce = 12f;
         [SerializeField] private float cancelJumpMult = 0f;
         [SerializeField] private float jumpMinTime = 0.1f;
+        [SerializeField] private float jumpBufferTime = 0.2f;
 
         [SerializeField] private PlayerAnimation playerAnimation;
         [SerializeField] private CharacterCollision characterCollision;
@@ -20,6 +21,8 @@ namespace MyPlatformer
         private Rigidbody2D rb;
 
         private bool jumpQueued = false;
+        private float jumpQueueTime = 0f;
+        private bool jumpCancelQueued = false;
         private bool jumpCanceled = false;
         private float jumpTimer = 0f;
         private bool isJumping = false;
@@ -40,10 +43,17 @@ namespace MyPlatformer
 
             if (jumpQueued)
             {
-                jumpQueued = false;
-                if (canJump)
+                if (Time.time - jumpQueueTime <= jumpBufferTime)
                 {
-                    Jump(Vector2.up);
+                    if (canJump)
+                    {
+                        Jump(Vector2.up);
+                        jumpQueued = false;
+                    }
+                }
+                else
+                {
+                    jumpQueued = false;
                 }
             }
 
@@ -84,10 +94,10 @@ namespace MyPlatformer
 
         void Jump(Vector2 dir)
         {
-            jumpCanceled = false;
             jumpTimer = 0f;
             isJumping = true;
             canJump = false;
+            jumpCanceled = false;
 
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.velocity += dir * jumpForce;
@@ -103,9 +113,9 @@ namespace MyPlatformer
 
         void CheckJumpCancel()
         {
-            if (jumpCanceled && jumpTimer >= jumpMinTime)
+            if (jumpCancelQueued && jumpTimer >= jumpMinTime && !jumpCanceled)
             {
-                jumpCanceled = false;
+                jumpCanceled = true;
                 if (rb.velocity.y > 0f && isJumping)
                 {
                     rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * cancelJumpMult);
@@ -115,12 +125,14 @@ namespace MyPlatformer
 
         public void QueueJump()
         {
+            jumpCancelQueued = false;
             jumpQueued = true;
+            jumpQueueTime = Time.time;
         }
 
         public void CancelJump()
         {
-            jumpCanceled = true;
+            jumpCancelQueued = true;
         }
     }
 }
