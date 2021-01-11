@@ -6,6 +6,10 @@ namespace MyPlatformer
 {
     public class Movement : MonoBehaviour
     {
+        public delegate void HitGroundDelegate();
+
+        public event HitGroundDelegate OnHitGround;
+
         [SerializeField] private float speed = 10f;
         [SerializeField] private float jumpForce = 12f;
         [SerializeField] private float cancelJumpMult = 0f;
@@ -29,6 +33,7 @@ namespace MyPlatformer
         private bool isJumping = false;
         private bool canJump = false;
         private float notGroundedTimer = 0f;
+        private bool wasGrounded = false;
 
         public bool IsMovingHorizontally
         {
@@ -94,6 +99,11 @@ namespace MyPlatformer
 
             if (characterCollision.OnGround)
             {
+                if (!wasGrounded)
+                {
+                    OnHitGround();
+                }
+
                 if (!isJumping)
                 {
                     canJump = true;
@@ -109,6 +119,8 @@ namespace MyPlatformer
                     canJump = false;
                 }
             }
+
+            wasGrounded = characterCollision.OnGround;
         }
 
         void Walk(float direction)
