@@ -72,6 +72,7 @@ namespace MyPlatformer
             else
             {
                 wasGrounded = false;
+                canJump = false;
             }
         }
 
