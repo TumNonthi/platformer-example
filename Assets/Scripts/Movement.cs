@@ -30,6 +30,22 @@ namespace MyPlatformer
         private bool canJump = false;
         private float notGroundedTimer = 0f;
 
+        public bool IsMovingHorizontally
+        {
+            get
+            {
+                return Mathf.Abs(horizontalIntent) > Mathf.Epsilon;
+            }
+        }
+
+        public bool IsGrounded
+        {
+            get
+            {
+                return characterCollision.OnGround;
+            }
+        }
+
         private void Start()
         {
             TryGetComponent(out rb);

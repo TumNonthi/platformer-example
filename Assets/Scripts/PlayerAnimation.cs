@@ -35,7 +35,7 @@ namespace MyPlatformer
         {
             if (_characterCollision.OnGround)
             {
-                if (Mathf.Abs(_movement.horizontalIntent) > Mathf.Epsilon)
+                if (_movement.IsMovingHorizontally)
                 {
                     PlayAnimIfNotAlreadyPlaying(runName);
                 }
