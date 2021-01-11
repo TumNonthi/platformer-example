@@ -11,6 +11,7 @@ namespace MyPlatformer
         [SerializeField] private float cancelJumpMult = 0f;
         [SerializeField] private float jumpMinTime = 0.1f;
         [SerializeField] private float jumpBufferTime = 0.2f;
+        [SerializeField] private float coyoteTime = 0.1f;
 
         [SerializeField] private PlayerAnimation playerAnimation;
         [SerializeField] private CharacterCollision characterCollision;
@@ -27,6 +28,7 @@ namespace MyPlatformer
         private float jumpTimer = 0f;
         private bool isJumping = false;
         private bool canJump = false;
+        private float notGroundedTimer = 0f;
 
         private void Start()
         {
@@ -35,7 +37,7 @@ namespace MyPlatformer
 
         private void Update()
         {
-            CheckGrounded();
+            CheckGrounded(Time.deltaTime);
             UpdateJumpTimer(Time.deltaTime);
             CheckJumpCancel();
 
@@ -67,7 +69,7 @@ namespace MyPlatformer
             }
         }
 
-        void CheckGrounded()
+        void CheckGrounded(float dt)
         {
             if (rb.velocity.y <= 0f)
             {
@@ -80,10 +82,16 @@ namespace MyPlatformer
                 {
                     canJump = true;
                 }
+
+                notGroundedTimer = 0f;
             }
             else
             {
-                canJump = false;
+                notGroundedTimer += dt;
+                if (notGroundedTimer > coyoteTime)
+                {
+                    canJump = false;
+                }
             }
         }
 
