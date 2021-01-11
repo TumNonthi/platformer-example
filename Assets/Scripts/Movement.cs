@@ -8,6 +8,8 @@ namespace MyPlatformer
     {
         [SerializeField] private float speed = 10f;
         [SerializeField] private float jumpForce = 12f;
+        [SerializeField] private float cancelJumpMult = 0f;
+        [SerializeField] private float jumpMinTime = 0.1f;
 
         [SerializeField] private PlayerAnimation playerAnimation;
         [SerializeField] private CharacterCollision characterCollision;
@@ -18,7 +20,10 @@ namespace MyPlatformer
         private Rigidbody2D rb;
 
         private bool jumpQueued = false;
+        private bool jumpCanceled = false;
+        private float jumpTimer = 0f;
         private bool canJump = false;
+        private bool isJumping = false;
         private bool wasGrounded = false;
 
         private void Start()
@@ -29,6 +34,8 @@ namespace MyPlatformer
         private void Update()
         {
             CheckGrounded();
+            UpdateJumpTimer(Time.deltaTime);
+            CheckJumpCancel();
 
             Walk(horizontalIntent);
 
@@ -58,6 +65,7 @@ namespace MyPlatformer
                 if (!wasGrounded)
                 {
                     wasGrounded = true;
+                    isJumping = false;
                     canJump = true;
                 }
             }
@@ -75,14 +83,42 @@ namespace MyPlatformer
         void Jump(Vector2 dir)
         {
             canJump = false;
+            jumpCanceled = false;
+            jumpTimer = 0f;
+            isJumping = true;
 
             rb.velocity = new Vector2(rb.velocity.x, 0f);
             rb.velocity += dir * jumpForce;
         }
 
+        void UpdateJumpTimer(float dt)
+        {
+            if (isJumping)
+            {
+                jumpTimer += dt;
+            }
+        }
+
+        void CheckJumpCancel()
+        {
+            if (jumpCanceled && jumpTimer >= jumpMinTime)
+            {
+                jumpCanceled = false;
+                if (rb.velocity.y > 0f && isJumping)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * cancelJumpMult);
+                }
+            }
+        }
+
         public void QueueJump()
         {
             jumpQueued = true;
+        }
+
+        public void CancelJump()
+        {
+            jumpCanceled = true;
         }
     }
 }
