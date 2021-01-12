@@ -125,6 +125,8 @@ namespace MyPlatformer
 
         void Walk(float direction)
         {
+            direction = Mathf.Clamp(direction, -1f, 1f);
+
             if (characterCollision.OnGround && !isJumping)
             {
                 rb.velocity = new Vector2(direction * speed, Mathf.Min(0f, rb.velocity.y));
