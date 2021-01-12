@@ -16,9 +16,12 @@ namespace MyPlatformer
         [SerializeField] private float jumpMinTime = 0.1f;
         [SerializeField] private float jumpBufferTime = 0.2f;
         [SerializeField] private float coyoteTime = 0.1f;
+        [SerializeField] private int maxNumberOfJumps = 1;
+        [SerializeField] private float dropThroughTime = 0.25f;
 
         [SerializeField] private PlayerAnimation playerAnimation;
         [SerializeField] private CharacterCollision characterCollision;
+        [SerializeField] private Collider2D bodyCollider;
 
         [HideInInspector]
         public float horizontalIntent = 0f;
@@ -31,9 +34,12 @@ namespace MyPlatformer
         private bool jumpCanceled = false;
         private float jumpTimer = 0f;
         private bool isJumping = false;
-        private bool canJump = false;
+        private int numberOfJumps = 1;
         private float notGroundedTimer = 0f;
         private bool wasGrounded = false;
+
+        private Collider2D ignoredCollider = null;
+        private float dropThroughTimer = 0f;
 
         public bool IsMovingHorizontally
         {
@@ -58,6 +64,7 @@ namespace MyPlatformer
 
         private void Update()
         {
+            CheckResetDropThrough(Time.deltaTime);
             CheckGrounded(Time.deltaTime);
             UpdateJumpTimer(Time.deltaTime);
             CheckJumpCancel();
@@ -68,7 +75,7 @@ namespace MyPlatformer
             {
                 if (Time.time - jumpQueueTime <= jumpBufferTime)
                 {
-                    if (canJump)
+                    if (CanJump())
                     {
                         Jump(Vector2.up);
                         jumpQueued = false;
@@ -106,7 +113,7 @@ namespace MyPlatformer
 
                 if (!isJumping)
                 {
-                    canJump = true;
+                    numberOfJumps = maxNumberOfJumps;
                 }
 
                 notGroundedTimer = 0f;
@@ -116,7 +123,10 @@ namespace MyPlatformer
                 notGroundedTimer += dt;
                 if (notGroundedTimer > coyoteTime)
                 {
-                    canJump = false;
+                    if (numberOfJumps == maxNumberOfJumps)
+                    {
+                        numberOfJumps--;
+                    }
                 }
             }
 
@@ -141,7 +151,7 @@ namespace MyPlatformer
         {
             jumpTimer = 0f;
             isJumping = true;
-            canJump = false;
+            numberOfJumps--;
             jumpCanceled = false;
 
             rb.velocity = new Vector2(rb.velocity.x, 0f);
@@ -168,6 +178,11 @@ namespace MyPlatformer
             }
         }
 
+        bool CanJump()
+        {
+            return numberOfJumps > 0 && dropThroughTimer <= 0f;
+        }
+
         public void QueueJump()
         {
             jumpCancelQueued = false;
@@ -178,6 +193,37 @@ namespace MyPlatformer
         public void CancelJump()
         {
             jumpCancelQueued = true;
+        }
+
+        public void DropThrough()
+        {
+            if (characterCollision.OneWayPlatformAtFeet != null)
+            {
+                ResetDropThrough();
+                Physics2D.IgnoreCollision(bodyCollider, characterCollision.OneWayPlatformAtFeet);
+                ignoredCollider = characterCollision.OneWayPlatformAtFeet;
+                dropThroughTimer = dropThroughTime;
+            }
+        }
+
+        void ResetDropThrough()
+        {
+            if (ignoredCollider != null)
+            {
+                Physics2D.IgnoreCollision(bodyCollider, ignoredCollider, false);
+            }
+        }
+
+        void CheckResetDropThrough(float dt)
+        {
+            if (dropThroughTimer > 0f)
+            {
+                dropThroughTimer -= dt;
+                if (dropThroughTimer <= 0f)
+                {
+                    ResetDropThrough();
+                }
+            }
         }
     }
 }
