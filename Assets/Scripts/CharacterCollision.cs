@@ -19,6 +19,8 @@ namespace MyPlatformer
 
         public LayerMask oneWayPlatformLayer;
 
+        [SerializeField] private Collider2D bodyCollider;
+
         Collider2D _oneWayPlatform = null;
         public Collider2D OneWayPlatformAtFeet
         {
@@ -27,6 +29,8 @@ namespace MyPlatformer
                 return _oneWayPlatform;
             }
         }
+
+        private Collider2D ignoredCollider = null;
 
         // Start is called before the first frame update
         void Start()
@@ -40,6 +44,24 @@ namespace MyPlatformer
             OnGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, groundCheckRadius, groundLayer);
 
             _oneWayPlatform = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, groundCheckRadius, oneWayPlatformLayer);
+        }
+
+        public void IgnoreOneWayPlatformAtFeet()
+        {
+            if (_oneWayPlatform != null)
+            {
+                ResetIgnoredPlatform();
+                Physics2D.IgnoreCollision(bodyCollider, _oneWayPlatform);
+                ignoredCollider = _oneWayPlatform;
+            }
+        }
+
+        public void ResetIgnoredPlatform()
+        {
+            if (ignoredCollider != null)
+            {
+                Physics2D.IgnoreCollision(bodyCollider, ignoredCollider, false);
+            }
         }
 
         private void OnDrawGizmos()

@@ -21,7 +21,6 @@ namespace MyPlatformer
 
         [SerializeField] private PlayerAnimation playerAnimation;
         [SerializeField] private CharacterCollision characterCollision;
-        [SerializeField] private Collider2D bodyCollider;
 
         [HideInInspector]
         public float horizontalIntent = 0f;
@@ -37,8 +36,7 @@ namespace MyPlatformer
         private int numberOfJumps = 1;
         private float notGroundedTimer = 0f;
         private bool wasGrounded = false;
-
-        private Collider2D ignoredCollider = null;
+        
         private float dropThroughTimer = 0f;
 
         public bool IsMovingHorizontally
@@ -197,21 +195,13 @@ namespace MyPlatformer
 
         public void DropThrough()
         {
-            if (characterCollision.OneWayPlatformAtFeet != null)
-            {
-                ResetDropThrough();
-                Physics2D.IgnoreCollision(bodyCollider, characterCollision.OneWayPlatformAtFeet);
-                ignoredCollider = characterCollision.OneWayPlatformAtFeet;
-                dropThroughTimer = dropThroughTime;
-            }
+            characterCollision.IgnoreOneWayPlatformAtFeet();
+            dropThroughTimer = dropThroughTime;
         }
 
         void ResetDropThrough()
         {
-            if (ignoredCollider != null)
-            {
-                Physics2D.IgnoreCollision(bodyCollider, ignoredCollider, false);
-            }
+            characterCollision.ResetIgnoredPlatform();
         }
 
         void CheckResetDropThrough(float dt)

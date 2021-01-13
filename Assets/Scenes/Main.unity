@@ -10740,7 +10740,6 @@ MonoBehaviour:
   dropThroughTime: 0.25
   playerAnimation: {fileID: 513531190}
   characterCollision: {fileID: 722614220}
-  bodyCollider: {fileID: 722614217}
   horizontalIntent: 0
 --- !u!114 &722614220
 MonoBehaviour:
@@ -10762,6 +10761,7 @@ MonoBehaviour:
   oneWayPlatformLayer:
     serializedVersion: 2
     m_Bits: 128
+  bodyCollider: {fileID: 722614217}
 --- !u!1 &838732456
 GameObject:
   m_ObjectHideFlags: 0
