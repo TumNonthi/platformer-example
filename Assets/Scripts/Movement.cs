@@ -178,7 +178,7 @@ namespace MyPlatformer
 
         bool CanJump()
         {
-            return numberOfJumps > 0 && dropThroughTimer <= 0f;
+            return numberOfJumps > 0;
         }
 
         public void QueueJump()

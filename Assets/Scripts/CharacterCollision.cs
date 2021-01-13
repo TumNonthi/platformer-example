@@ -21,6 +21,8 @@ namespace MyPlatformer
 
         [SerializeField] private Collider2D bodyCollider;
 
+        Collider2D[] _groundColliders;
+
         Collider2D _oneWayPlatform = null;
         public Collider2D OneWayPlatformAtFeet
         {
@@ -41,7 +43,19 @@ namespace MyPlatformer
         // Update is called once per frame
         void Update()
         {
-            OnGround = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, groundCheckRadius, groundLayer);
+            OnGround = false;
+            _groundColliders = Physics2D.OverlapCircleAll((Vector2)transform.position + bottomOffset, groundCheckRadius, groundLayer);
+            foreach (Collider2D groundCollider in _groundColliders)
+            {
+                if (Physics2D.GetIgnoreCollision(bodyCollider, groundCollider))
+                {
+                    continue;
+                }
+                else
+                {
+                    OnGround = true;
+                }
+            }
 
             _oneWayPlatform = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, groundCheckRadius, oneWayPlatformLayer);
         }
@@ -61,6 +75,7 @@ namespace MyPlatformer
             if (ignoredCollider != null)
             {
                 Physics2D.IgnoreCollision(bodyCollider, ignoredCollider, false);
+                ignoredCollider = null;
             }
         }
 
