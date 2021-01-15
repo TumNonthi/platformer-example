@@ -97,6 +97,8 @@ namespace MyPlatformer
 
         void CheckGrounded(float dt)
         {
+            bool hitGroundThisFrame = false;
+
             if (rb.velocity.y <= 0f)
             {
                 isJumping = false;
@@ -104,9 +106,13 @@ namespace MyPlatformer
 
             if (characterCollision.OnGround)
             {
-                if (!wasGrounded)
+                if (rb.velocity.y <= 0)
                 {
-                    OnHitGround();
+                    hitGroundThisFrame = true;
+                    if (!wasGrounded)
+                    {
+                        OnHitGround();
+                    }
                 }
 
                 if (!isJumping)
@@ -128,7 +134,7 @@ namespace MyPlatformer
                 }
             }
 
-            wasGrounded = characterCollision.OnGround;
+            wasGrounded = hitGroundThisFrame;
         }
 
         void Walk(float direction)
