@@ -9940,6 +9940,7 @@ MonoBehaviour:
   animator: {fileID: 513531189}
   _movement: {fileID: 722614219}
   _characterCollision: {fileID: 722614220}
+  _combatAbility: {fileID: 722614221}
   idleName: Idle
   runName: Run
   airName: Air
@@ -10646,6 +10647,7 @@ GameObject:
   - component: {fileID: 722614216}
   - component: {fileID: 722614219}
   - component: {fileID: 722614220}
+  - component: {fileID: 722614221}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10681,6 +10683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movement: {fileID: 722614219}
+  _combatAbility: {fileID: 722614221}
 --- !u!70 &722614217
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10762,6 +10765,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   bodyCollider: {fileID: 722614217}
+--- !u!114 &722614221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722614214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18f558ec28a1924a851df006d36ba30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAnimation: {fileID: 513531190}
+  basicAttackDefinition: {fileID: 11400000, guid: 1b51bddfad4b84d42a9768c9bb341302, type: 2}
+  attackBufferTime: 0.2
 --- !u!1 &838732456
 GameObject:
   m_ObjectHideFlags: 0

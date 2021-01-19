@@ -9,6 +9,7 @@ namespace MyPlatformer
     {
         [SerializeField] private PlayerControls _playerControls;
         [SerializeField] private Movement _movement;
+        [SerializeField] private PlayerCombatAbility _combatAbility;
 
         private void Awake()
         {
@@ -19,6 +20,7 @@ namespace MyPlatformer
         {
             _playerControls.Player.Jump.performed += HandleJump;
             _playerControls.Player.Jump.canceled += HandleCancelJump;
+            _playerControls.Player.Attack.performed += HandleAttack;
             _playerControls.Enable();
         }
 
@@ -26,6 +28,7 @@ namespace MyPlatformer
         {
             _playerControls.Player.Jump.performed -= HandleJump;
             _playerControls.Player.Jump.canceled -= HandleCancelJump;
+            _playerControls.Player.Attack.performed -= HandleAttack;
             _playerControls.Disable();
         }
 
@@ -50,6 +53,11 @@ namespace MyPlatformer
         void HandleCancelJump(InputAction.CallbackContext context)
         {
             _movement.CancelJump();
+        }
+
+        void HandleAttack(InputAction.CallbackContext context)
+        {
+            _combatAbility.QueueAttack();
         }
     }
 }
