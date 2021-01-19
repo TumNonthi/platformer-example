@@ -7,9 +7,9 @@ namespace MyPlatformer
 {
     public class PlayerBrain : MonoBehaviour
     {
-        [SerializeField] private PlayerControls _playerControls;
+        [SerializeField] private Movement _movement;
 
-        private float _moveHorizontal;
+        private PlayerControls _playerControls;
 
         private void Awake()
         {
@@ -18,18 +18,32 @@ namespace MyPlatformer
 
         private void OnEnable()
         {
+            _playerControls.Player.Jump.performed += HandleJump;
+            _playerControls.Player.Jump.canceled += HandleCancelJump;
             _playerControls.Enable();
         }
 
         private void OnDisable()
         {
+            _playerControls.Player.Jump.performed -= HandleJump;
+            _playerControls.Player.Jump.canceled -= HandleCancelJump;
             _playerControls.Disable();
         }
 
         // Update is called once per frame
         void Update()
         {
-            _moveHorizontal = _playerControls.Player.Move.ReadValue<float>();
+            _movement.horizontalIntent = _playerControls.Player.Move.ReadValue<Vector2>().x;
+        }
+
+        void HandleJump(InputAction.CallbackContext context)
+        {
+            _movement.QueueJump();
+        }
+
+        void HandleCancelJump(InputAction.CallbackContext context)
+        {
+            _movement.CancelJump();
         }
     }
 }
