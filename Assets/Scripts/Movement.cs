@@ -51,7 +51,7 @@ namespace MyPlatformer
         {
             get
             {
-                return characterCollision.OnGround;
+                return characterCollision.OnGround && !isJumping;
             }
         }
 

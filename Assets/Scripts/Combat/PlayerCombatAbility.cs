@@ -8,6 +8,7 @@ namespace MyPlatformer
     {
         [SerializeField] private AttackDefinition basicAttackDefinition;
         [SerializeField] private float attackBufferTime = 0.2f;
+        [SerializeField] private Condition basicAttackCondition;
 
         bool attackQueued = false;
         float attackQueueTime = 0f;
@@ -35,7 +36,7 @@ namespace MyPlatformer
 
         bool CanAttack()
         {
-            return true;
+            return basicAttackCondition.EvaluateResult(gameObject);
         }
 
         public void QueueAttack()
