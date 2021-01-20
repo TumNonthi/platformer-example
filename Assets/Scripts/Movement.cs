@@ -9,8 +9,13 @@ namespace MyPlatformer
         public delegate void HitGroundDelegate();
 
         public event HitGroundDelegate OnHitGround;
-
+        
+        [Header("Horizontal Movement")]
         [SerializeField] private float speed = 10f;
+        [SerializeField] private Condition walkCondition;
+
+        [Space]
+        [Header("Jumping")]
         [SerializeField] private float jumpForce = 12f;
         [SerializeField] private float cancelJumpMult = 0f;
         [SerializeField] private float jumpMinTime = 0.1f;
@@ -18,7 +23,10 @@ namespace MyPlatformer
         [SerializeField] private float coyoteTime = 0.1f;
         [SerializeField] private int maxNumberOfJumps = 1;
         [SerializeField] private float dropThroughTime = 0.25f;
+        [SerializeField] private Condition jumpCondition;
 
+        [Space]
+        [Header("References")]
         [SerializeField] private PlayerAnimation playerAnimation;
         [SerializeField] private CharacterCollision characterCollision;
 
@@ -27,6 +35,7 @@ namespace MyPlatformer
 
         private Rigidbody2D rb;
 
+        private bool isWalking = false;
         private bool jumpQueued = false;
         private float jumpQueueTime = 0f;
         private bool jumpCancelQueued = false;
@@ -43,7 +52,7 @@ namespace MyPlatformer
         {
             get
             {
-                return Mathf.Abs(horizontalIntent) > Mathf.Epsilon;
+                return isWalking;
             }
         }
 
@@ -51,7 +60,7 @@ namespace MyPlatformer
         {
             get
             {
-                return characterCollision.OnGround;
+                return characterCollision.OnGround && !isJumping;
             }
         }
 
@@ -62,12 +71,23 @@ namespace MyPlatformer
 
         private void Update()
         {
+            bool walkConditionResult = walkCondition.EvaluateResult(gameObject);
+
             CheckResetDropThrough(Time.deltaTime);
             CheckGrounded(Time.deltaTime);
             UpdateJumpTimer(Time.deltaTime);
             CheckJumpCancel();
 
-            Walk(horizontalIntent);
+            if (walkConditionResult)
+            {
+                Walk(horizontalIntent);
+                isWalking = Mathf.Abs(horizontalIntent) > Mathf.Epsilon;
+            }
+            else
+            {
+                Walk(0f);
+                isWalking = false;
+            }
 
             if (jumpQueued)
             {
@@ -85,13 +105,16 @@ namespace MyPlatformer
                 }
             }
 
-            if (horizontalIntent > 0f)
+            if (walkConditionResult)
             {
-                playerAnimation.Flip(1);
-            }
-            else if (horizontalIntent < 0f)
-            {
-                playerAnimation.Flip(-1);
+                if (horizontalIntent > 0f)
+                {
+                    playerAnimation.Flip(1);
+                }
+                else if (horizontalIntent < 0f)
+                {
+                    playerAnimation.Flip(-1);
+                }
             }
         }
 
@@ -184,7 +207,7 @@ namespace MyPlatformer
 
         bool CanJump()
         {
-            return numberOfJumps > 0;
+            return numberOfJumps > 0 && jumpCondition.EvaluateResult(gameObject);
         }
 
         public void QueueJump()
