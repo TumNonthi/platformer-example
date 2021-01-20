@@ -10734,6 +10734,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  walkCondition:
+    leftFunctionSO: {fileID: 11400000, guid: 3f650e14d9f15964f9de13165ce8ba64, type: 2}
+    comparison: 2
+    rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
   jumpForce: 12
   cancelJumpMult: 0
   jumpMinTime: 0.1
@@ -10741,6 +10745,10 @@ MonoBehaviour:
   coyoteTime: 0.1
   maxNumberOfJumps: 1
   dropThroughTime: 0.25
+  jumpCondition:
+    leftFunctionSO: {fileID: 11400000, guid: 3d23c3e5274afb14599202f652bb8a83, type: 2}
+    comparison: 2
+    rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
   playerAnimation: {fileID: 513531190}
   characterCollision: {fileID: 722614220}
   horizontalIntent: 0
@@ -10781,7 +10789,7 @@ MonoBehaviour:
   basicAttackDefinition: {fileID: 11400000, guid: 1b51bddfad4b84d42a9768c9bb341302, type: 2}
   attackBufferTime: 0.2
   basicAttackCondition:
-    leftFunctionSO: {fileID: 11400000, guid: 5d260e5c368218149b9a4c458e7382e6, type: 2}
+    leftFunctionSO: {fileID: 11400000, guid: ed3fad3cc4f6475408e507b60cb43efa, type: 2}
     comparison: 2
     rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
 --- !u!1 &838732456

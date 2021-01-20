@@ -4,16 +4,16 @@ using UnityEngine;
 
 namespace MyPlatformer
 {
-    [CreateAssetMenu(fileName = "IsCharacterGroundedCF", menuName = "Conditions/Is Character Grounded")]
-    public class IsCharacterGroundedSO : ConditionFunctionSO
+    [CreateAssetMenu(fileName = "IsCharacterWalkingCF", menuName = "Conditions/Is Character Walking")]
+    public class IsCharacterWalkingSO : ConditionFunctionSO
     {
         protected override ConditionFunction CreateFunction()
         {
-            return new IsCharacterGroundedConditionFunction();
+            return new IsCharacterWalkingConditionFunction();
         }
     }
 
-    public class IsCharacterGroundedConditionFunction : ConditionFunction
+    public class IsCharacterWalkingConditionFunction : ConditionFunction
     {
         private Movement _movement;
 
@@ -24,7 +24,7 @@ namespace MyPlatformer
 
         public override float GetValue()
         {
-            return _movement.IsGrounded ? 1f : 0f;
+            return _movement.IsMovingHorizontally ? 1f : 0f;
         }
     }
 }

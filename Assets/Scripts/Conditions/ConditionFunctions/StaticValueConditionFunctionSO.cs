@@ -28,5 +28,9 @@ namespace MyPlatformer
         {
             return _value;
         }
+
+        public override void Initialize()
+        {
+        }
     }
 }

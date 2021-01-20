@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 095da97755879424c9b3b9574f6237f7, type: 3}
+  m_Name: PlayerCanWalkCF
+  m_EditorClassIdentifier: 
+  conditionStackEntries:
+  - _condition:
+      leftFunctionSO: {fileID: 11400000, guid: 193e72fffb0639141af4cd9ec2fafce1, type: 2}
+      comparison: 2
+      rightFunctionSO: {fileID: 11400000, guid: 5632c2c27b080e946b42eb3b42b5010c, type: 2}
+    _operatorToNext: 0
