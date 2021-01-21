@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 namespace MyPlatformer
 {
-    public class PlayerBrain : MonoBehaviour
+    public class PlayerBrain : MonoBehaviour, IMovementInputSource
     {
         [SerializeField] private PlayerControls _playerControls;
         [SerializeField] private Movement _movement;
@@ -18,6 +18,11 @@ namespace MyPlatformer
 
         private void OnEnable()
         {
+            if (_movement != null)
+            {
+                _movement.movementInputSource = this;
+            }
+
             _playerControls.Player.Jump.performed += HandleJump;
             _playerControls.Player.Jump.canceled += HandleCancelJump;
             _playerControls.Player.Attack.performed += HandleAttack;
@@ -26,16 +31,18 @@ namespace MyPlatformer
 
         private void OnDisable()
         {
+            if (_movement != null)
+            {
+                if (_movement.movementInputSource.Equals(this))
+                {
+                    _movement.movementInputSource = null;
+                }
+            }
+
             _playerControls.Player.Jump.performed -= HandleJump;
             _playerControls.Player.Jump.canceled -= HandleCancelJump;
             _playerControls.Player.Attack.performed -= HandleAttack;
             _playerControls.Disable();
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            _movement.horizontalIntent = _playerControls.Player.Move.ReadValue<Vector2>().x;
         }
 
         void HandleJump(InputAction.CallbackContext context)
@@ -58,6 +65,11 @@ namespace MyPlatformer
         void HandleAttack(InputAction.CallbackContext context)
         {
             _combatAbility.QueueAttack();
+        }
+
+        public Vector2 GetMovementInput()
+        {
+            return _playerControls.Player.Move.ReadValue<Vector2>();
         }
     }
 }

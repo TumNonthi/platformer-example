@@ -30,6 +30,8 @@ namespace MyPlatformer
         [SerializeField] private PlayerAnimation playerAnimation;
         [SerializeField] private CharacterCollision characterCollision;
 
+        public IMovementInputSource movementInputSource;
+
         [HideInInspector]
         public float horizontalIntent = 0f;
 
@@ -73,6 +75,7 @@ namespace MyPlatformer
         {
             bool walkConditionResult = walkCondition.EvaluateResult(gameObject);
 
+            RequestMovementInput();
             CheckResetDropThrough(Time.deltaTime);
             CheckGrounded(Time.deltaTime);
             UpdateJumpTimer(Time.deltaTime);
@@ -115,6 +118,18 @@ namespace MyPlatformer
                 {
                     playerAnimation.Flip(-1);
                 }
+            }
+        }
+
+        void RequestMovementInput()
+        {
+            if (movementInputSource != null)
+            {
+                horizontalIntent = movementInputSource.GetMovementInput().x;
+            }
+            else
+            {
+                horizontalIntent = 0f;
             }
         }
 
