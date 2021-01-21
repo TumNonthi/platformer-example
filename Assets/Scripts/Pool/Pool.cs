@@ -6,12 +6,13 @@ namespace MyPlatformer
 {
     public abstract class Pool<T> : MonoBehaviour, IPool<T> where T : IPoolable
     {
-        protected Stack<T> Available = new Stack<T>();
+        protected Queue<T> Available = new Queue<T>();
 
         public abstract IFactory<T> Factory { get; set; }
         protected bool HasBeenPrewarmed { get; set; }
 
         private List<T> membersInUsed = new List<T>();
+        private List<T> membersToReturn = new List<T>();
 
         protected virtual T Create()
         {
@@ -26,14 +27,14 @@ namespace MyPlatformer
             }
             for (int i = 0; i < num; i++)
             {
-                Available.Push(Create());
+                Available.Enqueue(Create());
             }
             HasBeenPrewarmed = true;
         }
 
         public virtual T Request()
         {
-            T member = Available.Count > 0 ? Available.Pop() : Create();
+            T member = Available.Count > 0 ? Available.Dequeue() : Create();
             if (!membersInUsed.Contains(member))
             {
                 membersInUsed.Add(member);
@@ -53,7 +54,8 @@ namespace MyPlatformer
 
         public virtual void Return(T member)
         {
-            Available.Push(member);
+            membersInUsed.Remove(member);
+            Available.Enqueue(member);
         }
 
         public virtual void Return(IEnumerable<T> members)
@@ -72,13 +74,16 @@ namespace MyPlatformer
 
         protected virtual void Update()
         {
+            membersToReturn.Clear();
+
             foreach (T member in membersInUsed)
             {
                 if (member != null && member.IsDoneUsing())
                 {
-                    Return(member);
+                    membersToReturn.Add(member);
                 }
             }
+            Return(membersToReturn);
         }
 
         protected virtual void OnDestroy()
