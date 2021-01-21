@@ -7,9 +7,9 @@ namespace MyPlatformer
     public class PlayerAnimationEventHandler : MonoBehaviour
     {
         [SerializeField] private CombatActor _combatActor;
-        [SerializeField] private HitscanSO musketAttackSO;
-        [SerializeField] private Transform musketFirePoint;
-        [SerializeField] private int musketHitscanPoolSize = 1;
+        [SerializeField] private HitscanPointFactorySO _hitscanPointFactorySO;
+        [SerializeField] private int _musketHitscanPoolSize = 1;
+        [SerializeField] private Transform _musketFirePoint;
 
         private HitscanPointPool _musketHitscanPointPool;
 
@@ -20,14 +20,18 @@ namespace MyPlatformer
 
         public void FireMusket()
         {
-            musketAttackSO.Fire(_combatActor, _musketHitscanPointPool, musketFirePoint.position);
+            HitscanPoint hitscanPoint = _musketHitscanPointPool.Request();
+            hitscanPoint.transform.position = _musketFirePoint.position;
+            hitscanPoint.Fire(_combatActor);
         }
 
         void PrepareMusketHitscanPool()
         {
-            _musketHitscanPointPool = new GameObject("Musket Hitscan Point Pool").AddComponent<HitscanPointPool>();
-            _musketHitscanPointPool.transform.parent = transform;
-            musketAttackSO.PrepareHitscanPointPool(_musketHitscanPointPool, musketHitscanPoolSize);
+            _musketHitscanPointPool = PoolUtils.CreatePool<HitscanPointPool, HitscanPoint>(
+                "Musket Hitscan Point Pool", 
+                _hitscanPointFactorySO, 
+                transform, 
+                _musketHitscanPoolSize);
         }
     }
 }

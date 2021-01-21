@@ -188,8 +188,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f68a06a033e4a7a458204080b9262479, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bufferSize: 16
-  defaultDistance: 20
+  _attackDefinition: {fileID: 11400000, guid: 2e7cd599bc843f74792030e86d27d6a6, type: 2}
+  _bufferSize: 16
+  _range: 20
+  _layer:
+    serializedVersion: 2
+    m_Bits: 64
+  _pierce: 0
   _bulletTracer: {fileID: 3366339872724925622}
   _impactVfxFactorySO: {fileID: 11400000, guid: effe16858022eee44a8e1bf36e49867a, type: 2}
-  impactVfxPoolSize: 1
+  _impactVfxPoolSize: 1

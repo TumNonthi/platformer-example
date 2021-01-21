@@ -9958,10 +9958,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf87768efe4cd8b4ebe6dfae303b2e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _combatActor: {fileID: 0}
-  musketAttackSO: {fileID: 11400000, guid: 8881ed291315214499d29571a20794dc, type: 2}
-  musketFirePoint: {fileID: 2016660930}
-  musketHitscanPoolSize: 2
+  _combatActor: {fileID: 722614222}
+  _hitscanPointFactorySO: {fileID: 11400000, guid: aae3d7a474f99ea4f8a6f188c544015e, type: 2}
+  _musketHitscanPoolSize: 3
+  _musketFirePoint: {fileID: 2016660930}
 --- !u!1 &659787462
 GameObject:
   m_ObjectHideFlags: 0
