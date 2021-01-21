@@ -36,7 +36,7 @@ namespace MyPlatformer
             }
         }
 
-        public void Fire(HitscanSO originSO, float distance, LayerMask layerMask, bool pierce)
+        public void Fire(CombatActor attacker, HitscanSO originSO, float distance, LayerMask layerMask, bool pierce)
         {
             _result.Clear();
             if (distance <= 0f)
@@ -50,33 +50,27 @@ namespace MyPlatformer
             }
             _result.Sort((a, b) => a.distance.CompareTo(b.distance));
 
+            if (!pierce && _result.Count > 1)
+            {
+                _result.RemoveRange(1, _result.Count - 1);
+            }
+
             List<Vector3> targetPositons = new List<Vector3>();
             Vector3 endPosition = transform.position + (transform.right * distance);
 
-            if (pierce)
+            foreach (var hit in _result)
             {
-                foreach (var hit in _result)
-                {
-                    targetPositons.Add(hit.point);
-                }
-                if (_result.Count > 0)
-                {
-                    endPosition = _result[_result.Count - 1].point;
-                }
+                targetPositons.Add(hit.point);
             }
-            else
+            if (_result.Count > 0)
             {
-                if (_result.Count > 0)
-                {
-                    targetPositons.Add(_result[0].point);
-                    endPosition = _result[0].point;
-                }
+                endPosition = _result[_result.Count - 1].point;
             }
 
             _bulletTracer?.CreateTracer(transform.position, endPosition);
             PlayImpactVfx(targetPositons);
 
-            originSO?.OnHit(this, _result);
+            originSO?.OnHit(attacker, this, _result, transform.right);
 
             gameObject.SetActive(false);
         }
@@ -89,7 +83,6 @@ namespace MyPlatformer
                 {
                     PoolableVisualEffect vfx = _impactVfxPool.Request();
                     vfx.transform.parent = null;
-                    Debug.Log(target);
                     vfx.transform.position = target;
                     vfx.PlayVfx();
                 }

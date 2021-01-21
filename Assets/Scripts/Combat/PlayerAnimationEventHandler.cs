@@ -6,6 +6,7 @@ namespace MyPlatformer
 {
     public class PlayerAnimationEventHandler : MonoBehaviour
     {
+        [SerializeField] private CombatActor _combatActor;
         [SerializeField] private HitscanSO musketAttackSO;
         [SerializeField] private Transform musketFirePoint;
         [SerializeField] private int musketHitscanPoolSize = 1;
@@ -19,7 +20,7 @@ namespace MyPlatformer
 
         public void FireMusket()
         {
-            musketAttackSO.Fire(_musketHitscanPointPool, musketFirePoint.position);
+            musketAttackSO.Fire(_combatActor, _musketHitscanPointPool, musketFirePoint.position);
         }
 
         void PrepareMusketHitscanPool()

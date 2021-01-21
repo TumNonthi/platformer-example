@@ -9958,6 +9958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf87768efe4cd8b4ebe6dfae303b2e29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _combatActor: {fileID: 0}
   musketAttackSO: {fileID: 11400000, guid: 8881ed291315214499d29571a20794dc, type: 2}
   musketFirePoint: {fileID: 2016660930}
   musketHitscanPoolSize: 2
@@ -10665,6 +10666,7 @@ GameObject:
   - component: {fileID: 722614219}
   - component: {fileID: 722614220}
   - component: {fileID: 722614221}
+  - component: {fileID: 722614222}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10813,6 +10815,18 @@ MonoBehaviour:
     comparison: 2
     rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
     defaultValue: 0
+--- !u!114 &722614222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722614214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1936f9c1aa1c5d5499e1f05055231c67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &838732456
 GameObject:
   m_ObjectHideFlags: 0
@@ -11060,6 +11074,7 @@ GameObject:
   - component: {fileID: 1305727873}
   - component: {fileID: 1305727872}
   - component: {fileID: 1305727871}
+  - component: {fileID: 1305727874}
   m_Layer: 6
   m_Name: Crate (1)
   m_TagString: Untagged
@@ -11158,6 +11173,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1305727874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305727870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a183514b0d01bbe4cacd620a90838e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1323960302
 GameObject:
   m_ObjectHideFlags: 0
@@ -11397,6 +11424,7 @@ GameObject:
   - component: {fileID: 2123539543}
   - component: {fileID: 2123539542}
   - component: {fileID: 2123539541}
+  - component: {fileID: 2123539544}
   m_Layer: 6
   m_Name: Crate
   m_TagString: Untagged
@@ -11495,3 +11523,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2123539544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123539540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a183514b0d01bbe4cacd620a90838e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

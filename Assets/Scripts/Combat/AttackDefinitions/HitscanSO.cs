@@ -12,22 +12,19 @@ namespace MyPlatformer
         [SerializeField] private bool _pierce;
         [SerializeField] private HitscanPointFactorySO _hitscanPointFactorySO;
 
-        public void Fire(HitscanPointPool poolSO, Vector3 originPosition)
+        public void Fire(CombatActor attacker, HitscanPointPool poolSO, Vector3 originPosition)
         {
             HitscanPoint hitscanPoint = poolSO.Request();
             hitscanPoint.transform.position = originPosition;
-            hitscanPoint.Fire(this, _range, _layer, _pierce);
+            hitscanPoint.Fire(attacker, this, _range, _layer, _pierce);
         }
 
-        public void OnHit(HitscanPoint hitscanPoint, List<RaycastHit2D> hits)
+        public void OnHit(CombatActor attacker, HitscanPoint hitscanPoint, List<RaycastHit2D> hits, Vector3 hitscanDirection)
         {
-            if (hits.Count > 0)
+            foreach (RaycastHit2D hit in hits)
             {
-                Debug.Log($"Hit: {hits[0].collider.gameObject.name}");
-            }
-            else
-            {
-                Debug.Log("Hit nothing");
+                Attack attack = CreateAttack(hit.point, hitscanDirection);
+                PerformAttackHit(attacker, hit.collider.gameObject, attack);
             }
         }
 
