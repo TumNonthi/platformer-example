@@ -134,7 +134,7 @@ namespace MyPlatformer
                     hitGroundThisFrame = true;
                     if (!wasGrounded)
                     {
-                        OnHitGround();
+                        OnHitGround?.Invoke();
                     }
                 }
 

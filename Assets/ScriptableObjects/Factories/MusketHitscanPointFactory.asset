@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74a7263182638bc40a4b71d1627432ce, type: 3}
-  m_Name: BasicAttack
+  m_Script: {fileID: 11500000, guid: aecccc2972457d6489b38701e1429b6d, type: 3}
+  m_Name: MusketHitscanPointFactory
   m_EditorClassIdentifier: 
-  animationStateName: Attack
+  prefab: {fileID: 4246009229117165733, guid: e6943a3125671564dae568e25ad9ae59, type: 3}

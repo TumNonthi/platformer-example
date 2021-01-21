@@ -9832,6 +9832,7 @@ GameObject:
   - component: {fileID: 513531188}
   - component: {fileID: 513531189}
   - component: {fileID: 513531190}
+  - component: {fileID: 513531191}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -9852,6 +9853,7 @@ Transform:
   m_Children:
   - {fileID: 144551508}
   - {fileID: 250608342}
+  - {fileID: 2016660930}
   m_Father: {fileID: 722614215}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9944,6 +9946,21 @@ MonoBehaviour:
   idleName: Idle
   runName: Run
   airName: Air
+--- !u!114 &513531191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513531186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf87768efe4cd8b4ebe6dfae303b2e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musketAttackSO: {fileID: 11400000, guid: 8881ed291315214499d29571a20794dc, type: 2}
+  musketFirePoint: {fileID: 2016660930}
+  musketHitscanPoolSize: 2
 --- !u!1 &659787462
 GameObject:
   m_ObjectHideFlags: 0
@@ -10738,6 +10755,7 @@ MonoBehaviour:
     leftFunctionSO: {fileID: 11400000, guid: 3f650e14d9f15964f9de13165ce8ba64, type: 2}
     comparison: 2
     rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
+    defaultValue: 0
   jumpForce: 12
   cancelJumpMult: 0
   jumpMinTime: 0.1
@@ -10749,6 +10767,7 @@ MonoBehaviour:
     leftFunctionSO: {fileID: 11400000, guid: 3d23c3e5274afb14599202f652bb8a83, type: 2}
     comparison: 2
     rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
+    defaultValue: 0
   playerAnimation: {fileID: 513531190}
   characterCollision: {fileID: 722614220}
   horizontalIntent: 0
@@ -10786,12 +10805,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterAnimation: {fileID: 513531190}
-  basicAttackDefinition: {fileID: 11400000, guid: 1b51bddfad4b84d42a9768c9bb341302, type: 2}
+  basicAttackMoveInfo:
+    _animationStateName: Attack
   attackBufferTime: 0.2
   basicAttackCondition:
     leftFunctionSO: {fileID: 11400000, guid: ed3fad3cc4f6475408e507b60cb43efa, type: 2}
     comparison: 2
     rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
+    defaultValue: 0
 --- !u!1 &838732456
 GameObject:
   m_ObjectHideFlags: 0
@@ -11225,4 +11246,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2016660929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2016660930}
+  m_Layer: 0
+  m_Name: MusketFirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2016660930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016660929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.735, y: 0.935, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 513531187}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

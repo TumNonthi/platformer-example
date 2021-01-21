@@ -10,6 +10,7 @@ namespace MyPlatformer
         [SerializeField] private ConditionFunctionSO leftFunctionSO;
         [SerializeField] private ComparisonOperator comparison;
         [SerializeField] private ConditionFunctionSO rightFunctionSO;
+        [SerializeField] private bool defaultValue;
 
         private Dictionary<ConditionFunctionSO, ConditionFunction> createdFunctionInstances = new Dictionary<ConditionFunctionSO, ConditionFunction>();
 
@@ -18,13 +19,13 @@ namespace MyPlatformer
             if (target == null)
             {
                 Debug.LogError("No target for condition.");
-                return false;
+                return defaultValue;
             }
 
             if (leftFunctionSO == null || rightFunctionSO == null)
             {
                 Debug.LogError("Null condition function.");
-                return false;
+                return defaultValue;
             }
 
             float leftFunctionValue = leftFunctionSO.GetConditionFunction(target, createdFunctionInstances).GetValue();

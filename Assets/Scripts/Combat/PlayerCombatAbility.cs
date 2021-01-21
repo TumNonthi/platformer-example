@@ -6,7 +6,7 @@ namespace MyPlatformer
 {
     public class PlayerCombatAbility : BaseCombatAbility
     {
-        [SerializeField] private AttackDefinition basicAttackDefinition;
+        [SerializeField] private CombatMoveInfo basicAttackMoveInfo;
         [SerializeField] private float attackBufferTime = 0.2f;
         [SerializeField] private Condition basicAttackCondition;
 
@@ -23,7 +23,7 @@ namespace MyPlatformer
                 {
                     if (CanAttack())
                     {
-                        StartAttack(basicAttackDefinition);
+                        StartAttack(basicAttackMoveInfo);
                         attackQueued = false;
                     }
                 }

@@ -5,8 +5,7 @@ using UnityEngine;
 namespace MyPlatformer
 {
     [CreateAssetMenu(fileName = "Attack.asset", menuName = "Attack/BaseAttack")]
-    public class AttackDefinition : ScriptableObject
+    public class AttackDefinitionSO : ScriptableObject
     {
-        public string animationStateName;
     }
 }
