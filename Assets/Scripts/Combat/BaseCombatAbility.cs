@@ -17,7 +17,7 @@ namespace MyPlatformer
         }
         protected bool _isAttacking;
 
-        protected AttackDefinition _currentAttackDefinition = null;
+        protected CombatMoveInfo _currentMoveInfo = null;
 
         protected virtual void Update()
         {
@@ -26,11 +26,11 @@ namespace MyPlatformer
 
         protected virtual void CheckAttackAnimation()
         {
-            if (_currentAttackDefinition != null)
+            if (_currentMoveInfo != null)
             {
                 bool attackEnded = false;
 
-                if (characterAnimation.IsCurrentlyOnState(_currentAttackDefinition.animationStateName))
+                if (characterAnimation.IsCurrentlyOnState(_currentMoveInfo.animationStateName))
                 {
                     if (characterAnimation.GetAnimationNormalizedTime() >= 1f)
                     {
@@ -49,11 +49,11 @@ namespace MyPlatformer
             }
         }
 
-        public void StartAttack(AttackDefinition attackDefinition)
+        public void StartAttack(CombatMoveInfo moveInfo)
         {
             _isAttacking = true;
-            characterAnimation.PlayAnimation(attackDefinition.animationStateName);
-            _currentAttackDefinition = attackDefinition;
+            characterAnimation.PlayAnimation(moveInfo.animationStateName);
+            _currentMoveInfo = moveInfo;
         }
 
         protected virtual void EndCurrentAttackSuccessfully()
@@ -64,7 +64,7 @@ namespace MyPlatformer
         public void ResetAttackData()
         {
             _isAttacking = false;
-            _currentAttackDefinition = null;
+            _currentMoveInfo = null;
         }
     }
 }
