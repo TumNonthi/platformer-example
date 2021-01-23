@@ -10,7 +10,12 @@ namespace MyPlatformer
 
         public event HitGroundDelegate OnHitGround;
 
+        [Header("Horizontal Movement")]
         [SerializeField] private float speed = 10f;
+        [SerializeField] Condition walkCondition;
+
+        [Space]
+        [Header("Jumping")]
         [SerializeField] private float jumpForce = 12f;
         [SerializeField] private float cancelJumpMult = 0f;
         [SerializeField] private float jumpMinTime = 0.1f;
@@ -19,7 +24,9 @@ namespace MyPlatformer
         [SerializeField] private int maxNumberOfJumps = 1;
         [SerializeField] private float dropThroughTime = 0.25f;
 
-        [SerializeField] private PlayerAnimation playerAnimation;
+        [Space]
+        [Header("References")]
+        [SerializeField] private BaseCharacterAnimation characterAnimation;
         [SerializeField] private CharacterCollision characterCollision;
 
         [HideInInspector]
@@ -27,6 +34,7 @@ namespace MyPlatformer
 
         private Rigidbody2D rb;
 
+        private bool isWalking = false;
         private bool jumpQueued = false;
         private float jumpQueueTime = 0f;
         private bool jumpCancelQueued = false;
@@ -43,7 +51,7 @@ namespace MyPlatformer
         {
             get
             {
-                return Mathf.Abs(horizontalIntent) > Mathf.Epsilon;
+                return isWalking;
             }
         }
 
@@ -62,12 +70,23 @@ namespace MyPlatformer
 
         private void Update()
         {
+            bool walkConditionResult = walkCondition.EvaluateResult(gameObject);
+
             CheckResetDropThrough(Time.deltaTime);
             CheckGrounded(Time.deltaTime);
             UpdateJumpTimer(Time.deltaTime);
             CheckJumpCancel();
 
-            Walk(horizontalIntent);
+            if (walkConditionResult)
+            {
+                Walk(horizontalIntent);
+                isWalking = Mathf.Abs(horizontalIntent) > Mathf.Epsilon;
+            }
+            else
+            {
+                Walk(0f);
+                isWalking = false;
+            }
 
             if (jumpQueued)
             {
@@ -85,13 +104,16 @@ namespace MyPlatformer
                 }
             }
 
-            if (horizontalIntent > 0f)
+            if (walkConditionResult)
             {
-                playerAnimation.Flip(1);
-            }
-            else if (horizontalIntent < 0f)
-            {
-                playerAnimation.Flip(-1);
+                if (horizontalIntent > 0f)
+                {
+                    characterAnimation.Flip(1);
+                }
+                else if (horizontalIntent < 0f)
+                {
+                    characterAnimation.Flip(-1);
+                }
             }
         }
 

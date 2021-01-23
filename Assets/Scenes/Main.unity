@@ -9940,6 +9940,7 @@ MonoBehaviour:
   animator: {fileID: 513531189}
   _movement: {fileID: 722614219}
   _characterCollision: {fileID: 722614220}
+  _combatAbility: {fileID: 722614221}
   idleName: Idle
   runName: Run
   airName: Air
@@ -10646,6 +10647,7 @@ GameObject:
   - component: {fileID: 722614216}
   - component: {fileID: 722614219}
   - component: {fileID: 722614220}
+  - component: {fileID: 722614221}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10681,6 +10683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movement: {fileID: 722614219}
+  _combatAbility: {fileID: 722614221}
 --- !u!70 &722614217
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -10731,6 +10734,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
+  walkCondition:
+    leftFunctionSO: {fileID: 11400000, guid: ad8fa4a9e1a497049afacb19e0c040e0, type: 2}
+    comparison: 2
+    rightFunctionSO: {fileID: 11400000, guid: 8e08522f49378ee409c67deae53f157b, type: 2}
+    defaultValue: 0
+    defaultTarget: {fileID: 0}
   jumpForce: 12
   cancelJumpMult: 0
   jumpMinTime: 0.1
@@ -10738,7 +10747,7 @@ MonoBehaviour:
   coyoteTime: 0.1
   maxNumberOfJumps: 1
   dropThroughTime: 0.25
-  playerAnimation: {fileID: 513531190}
+  characterAnimation: {fileID: 513531190}
   characterCollision: {fileID: 722614220}
   horizontalIntent: 0
 --- !u!114 &722614220
@@ -10762,6 +10771,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   bodyCollider: {fileID: 722614217}
+--- !u!114 &722614221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722614214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ac66390b238c44db5f964ca7c7c316, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterAnimation: {fileID: 513531190}
+  basicAttackMoveInfo:
+    _animationStateName: Attack
+  attackBufferTime: 0.2
+  basicAttackCondition:
+    leftFunctionSO: {fileID: 11400000, guid: a4c70f31959204f489840383b096b8fe, type: 2}
+    comparison: 2
+    rightFunctionSO: {fileID: 11400000, guid: 056c176bd7b3f68449e6499cad0cc6ac, type: 2}
+    defaultValue: 0
+    defaultTarget: {fileID: 0}
 --- !u!1 &838732456
 GameObject:
   m_ObjectHideFlags: 0
@@ -10882,7 +10913,7 @@ GameObject:
   - component: {fileID: 1002157079}
   - component: {fileID: 1002157078}
   m_Layer: 7
-  m_Name: Square
+  m_Name: OneWayPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
