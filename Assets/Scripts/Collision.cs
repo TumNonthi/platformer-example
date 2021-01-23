@@ -11,7 +11,22 @@ namespace MyPlatformer
         public float groundCheckRadius = 0.25f;
         public Vector2 bottomOffset;
 
+        public LayerMask oneWayPlatformLayer;
+
+        [SerializeField] private Collider2D bodyCollider;
+
         Collider2D[] _groundColliders;
+
+        Collider2D _oneWayPlatform = null;
+        public Collider2D OneWayPlatformAtFeet
+        {
+            get
+            {
+                return _oneWayPlatform;
+            }
+        }
+
+        private Collider2D ignoredCollider = null;
 
         public bool OnGround
         {
@@ -30,9 +45,37 @@ namespace MyPlatformer
         {
             OnGround = false;
             _groundColliders = Physics2D.OverlapCircleAll((Vector2)transform.position + bottomOffset, groundCheckRadius, groundLayer);
-            if (_groundColliders.Length > 0)
+            foreach (Collider2D groundCollider in _groundColliders)
             {
-                OnGround = true;
+                if (Physics2D.GetIgnoreCollision(bodyCollider, groundCollider))
+                {
+                    continue;
+                }
+                else
+                {
+                    OnGround = true;
+                }
+            }
+
+            _oneWayPlatform = Physics2D.OverlapCircle((Vector2)transform.position + bottomOffset, groundCheckRadius, oneWayPlatformLayer);
+        }
+
+        public void IgnoreOneWayPlatformAtFeet()
+        {
+            if (_oneWayPlatform != null)
+            {
+                ResetIgnoredPlatform();
+                Physics2D.IgnoreCollision(bodyCollider, _oneWayPlatform);
+                ignoredCollider = _oneWayPlatform;
+            }
+        }
+
+        public void ResetIgnoredPlatform()
+        {
+            if (ignoredCollider != null)
+            {
+                Physics2D.IgnoreCollision(bodyCollider, ignoredCollider, false);
+                ignoredCollider = null;
             }
         }
 

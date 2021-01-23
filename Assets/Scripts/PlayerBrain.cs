@@ -38,7 +38,14 @@ namespace MyPlatformer
 
         void HandleJump(InputAction.CallbackContext context)
         {
-            _movement.QueueJump();
+            if (_playerControls.Player.Move.ReadValue<Vector2>().y < 0f)
+            {
+                _movement.DropThrough();
+            }
+            else
+            {
+                _movement.QueueJump();
+            }
         }
 
         void HandleCancelJump(InputAction.CallbackContext context)

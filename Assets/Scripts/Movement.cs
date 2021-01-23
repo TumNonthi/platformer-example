@@ -17,6 +17,7 @@ namespace MyPlatformer
         [SerializeField] private int maxNumberOfJumps = 1;
         [SerializeField] private float jumpBufferTime = 0.2f;
         [SerializeField] private float coyoteTime = 0.1f;
+        [SerializeField] private float dropThroughTime = 0.25F;
 
         [SerializeField] private CharacterAnimation _characterAnimation;
         [SerializeField] private Collision _collision;
@@ -34,6 +35,7 @@ namespace MyPlatformer
         private int numberOfJumps = 0;
         private float notGroundedTimer = 0f;
         private bool wasGrounded = false;
+        private float dropThroughTimer = 0f;
 
         public bool IsMovingHorizontally
         {
@@ -58,6 +60,7 @@ namespace MyPlatformer
 
         private void FixedUpdate()
         {
+            CheckResetDropThrough(Time.deltaTime);
             CheckGrounded(Time.deltaTime);
             UpdateJumpTimer(Time.deltaTime);
             CheckJumpCancel();
@@ -167,6 +170,29 @@ namespace MyPlatformer
         public void CancelJump()
         {
             jumpCanceledQueue = true;
+        }
+
+        public void DropThrough()
+        {
+            _collision.IgnoreOneWayPlatformAtFeet();
+            dropThroughTimer = dropThroughTime;
+        }
+
+        void ResetDropThrough()
+        {
+            _collision.ResetIgnoredPlatform();
+        }
+
+        void CheckResetDropThrough(float dt)
+        {
+            if (dropThroughTimer > 0f)
+            {
+                dropThroughTimer -= dt;
+                if (dropThroughTimer <= 0f)
+                {
+                    ResetDropThrough();
+                }
+            }
         }
 
         // check if we can jump right now
