@@ -17,9 +17,13 @@ MonoBehaviour:
       leftFunctionSO: {fileID: 11400000, guid: 5d260e5c368218149b9a4c458e7382e6, type: 2}
       comparison: 2
       rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
+      defaultValue: 0
+      defaultTarget: {fileID: 0}
     _operatorToNext: 0
   - _condition:
       leftFunctionSO: {fileID: 11400000, guid: 193e72fffb0639141af4cd9ec2fafce1, type: 2}
       comparison: 2
       rightFunctionSO: {fileID: 11400000, guid: 5632c2c27b080e946b42eb3b42b5010c, type: 2}
+      defaultValue: 0
+      defaultTarget: {fileID: 0}
     _operatorToNext: 0

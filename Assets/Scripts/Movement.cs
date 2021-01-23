@@ -27,7 +27,7 @@ namespace MyPlatformer
 
         [Space]
         [Header("References")]
-        [SerializeField] private PlayerAnimation playerAnimation;
+        [SerializeField] private BaseCharacterAnimation characterAnimation;
         [SerializeField] private CharacterCollision characterCollision;
 
         public IMovementInputSource movementInputSource;
@@ -112,11 +112,11 @@ namespace MyPlatformer
             {
                 if (horizontalIntent > 0f)
                 {
-                    playerAnimation.Flip(1);
+                    characterAnimation.Flip(1);
                 }
                 else if (horizontalIntent < 0f)
                 {
-                    playerAnimation.Flip(-1);
+                    characterAnimation.Flip(-1);
                 }
             }
         }

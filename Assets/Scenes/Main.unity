@@ -9960,7 +9960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _combatActor: {fileID: 722614222}
   _hitscanPointFactorySO: {fileID: 11400000, guid: aae3d7a474f99ea4f8a6f188c544015e, type: 2}
-  _musketHitscanPoolSize: 3
+  _musketHitscanPoolSize: 1
   _musketFirePoint: {fileID: 2016660930}
 --- !u!1 &659787462
 GameObject:
@@ -10758,6 +10758,7 @@ MonoBehaviour:
     comparison: 2
     rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
     defaultValue: 0
+    defaultTarget: {fileID: 0}
   jumpForce: 12
   cancelJumpMult: 0
   jumpMinTime: 0.1
@@ -10770,7 +10771,8 @@ MonoBehaviour:
     comparison: 2
     rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
     defaultValue: 0
-  playerAnimation: {fileID: 513531190}
+    defaultTarget: {fileID: 0}
+  characterAnimation: {fileID: 513531190}
   characterCollision: {fileID: 722614220}
   horizontalIntent: 0
 --- !u!114 &722614220
@@ -10815,6 +10817,7 @@ MonoBehaviour:
     comparison: 2
     rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
     defaultValue: 0
+    defaultTarget: {fileID: 0}
 --- !u!114 &722614222
 MonoBehaviour:
   m_ObjectHideFlags: 0

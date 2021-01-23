@@ -11,6 +11,7 @@ namespace MyPlatformer
         [SerializeField] private ComparisonOperator comparison;
         [SerializeField] private ConditionFunctionSO rightFunctionSO;
         [SerializeField] private bool defaultValue;
+        [SerializeField] private GameObject defaultTarget;
 
         private Dictionary<ConditionFunctionSO, ConditionFunction> createdFunctionInstances = new Dictionary<ConditionFunctionSO, ConditionFunction>();
 
@@ -18,8 +19,15 @@ namespace MyPlatformer
         {
             if (target == null)
             {
-                Debug.LogError("No target for condition.");
-                return defaultValue;
+                if (defaultTarget != null)
+                {
+                    target = defaultTarget;
+                }
+                else
+                {
+                    Debug.LogError("No target for condition.");
+                    return defaultValue;
+                }
             }
 
             if (leftFunctionSO == null || rightFunctionSO == null)
