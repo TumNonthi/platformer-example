@@ -17,6 +17,11 @@ namespace MyPlatformer
 
         public bool EvaluateResult(GameObject target)
         {
+            return EvaluateResult(target, createdFunctionInstances);
+        }
+
+        public bool EvaluateResult(GameObject target, Dictionary<ConditionFunctionSO, ConditionFunction> cache)
+        {
             if (target == null)
             {
                 if (defaultTarget != null)
@@ -36,8 +41,8 @@ namespace MyPlatformer
                 return defaultValue;
             }
 
-            float leftFunctionValue = leftFunctionSO.GetConditionFunction(target, createdFunctionInstances).GetValue();
-            float rightFunctionValue = rightFunctionSO.GetConditionFunction(target, createdFunctionInstances).GetValue();
+            float leftFunctionValue = leftFunctionSO.GetConditionFunction(target, cache).GetValue();
+            float rightFunctionValue = rightFunctionSO.GetConditionFunction(target, cache).GetValue();
 
             return Compare(leftFunctionValue, comparison, rightFunctionValue);
         }
