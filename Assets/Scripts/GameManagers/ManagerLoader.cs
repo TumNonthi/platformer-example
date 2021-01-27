@@ -7,12 +7,17 @@ namespace MyPlatformer
 {
     public class ManagerLoader : MonoBehaviour
     {
+#if UNITY_EDITOR
         public GameSceneSO ManagerSceneSO;
+        public bool IsEditorInitializationMode
+        {
+            get;
+            private set;
+        }
 
         private void Awake()
         {
             LoadManagerScene();
-            Destroy(gameObject);
         }
         
         void LoadManagerScene()
@@ -21,7 +26,9 @@ namespace MyPlatformer
             if (!managerScene.isLoaded)
             {
                 SceneManager.LoadScene(ManagerSceneSO.scenePath, LoadSceneMode.Additive);
+                IsEditorInitializationMode = true;
             }
         }
+#endif
     }
 }

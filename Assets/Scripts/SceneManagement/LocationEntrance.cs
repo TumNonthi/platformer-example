@@ -2,17 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LocationEntrance : MonoBehaviour
+namespace MyPlatformer
 {
-    // Start is called before the first frame update
-    void Start()
+    public class LocationEntrance : MonoBehaviour
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void RunPlayerSpawnSequence(PlayerCharacter playerCharacter, System.Action<PlayerCharacter> callback)
+        {
+            playerCharacter.transform.position = transform.position;
+            callback.Invoke(playerCharacter);
+        }
     }
 }

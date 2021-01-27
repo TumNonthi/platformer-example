@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace MyPlatformer
 {
-    public class LevelManager : MonoBehaviour
+    public class PlayerCharacter : MonoBehaviour
     {
         
     }
