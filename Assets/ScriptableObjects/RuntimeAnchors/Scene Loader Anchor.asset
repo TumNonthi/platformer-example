@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12b33d295b6bcb14b9b70cadd9d8ff9c, type: 3}
-  m_Name: GrassRoom
+  m_Script: {fileID: 11500000, guid: e8ce59b047c9baf4dadd528b8e4464f5, type: 3}
+  m_Name: Scene Loader Anchor
   m_EditorClassIdentifier: 
-  sceneAsset: {fileID: 102900000, guid: 89d4c6fe43367c8458907061821e130f, type: 3}
-  scenePath: Assets/Scenes/GrassRoom.unity
-  shortDescription: 
+  description: 

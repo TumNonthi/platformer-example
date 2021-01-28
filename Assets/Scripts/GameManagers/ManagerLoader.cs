@@ -8,7 +8,7 @@ namespace MyPlatformer
     public class ManagerLoader : MonoBehaviour
     {
 #if UNITY_EDITOR
-        public GameSceneSO ManagerSceneSO;
+        public GameSceneSO[] ManagerScenes;
         public bool IsEditorInitializationMode
         {
             get;
@@ -22,11 +22,30 @@ namespace MyPlatformer
         
         void LoadManagerScene()
         {
-            Scene managerScene = SceneManager.GetSceneByName(ManagerSceneSO.scenePath);
-            if (!managerScene.isLoaded)
+            List<GameSceneSO> scenesToLoad = new List<GameSceneSO>();
+
+            for (int i = 0; i < ManagerScenes.Length; i++)
             {
-                SceneManager.LoadScene(ManagerSceneSO.scenePath, LoadSceneMode.Additive);
-                IsEditorInitializationMode = true;
+                GameSceneSO sceneSO = ManagerScenes[i];
+
+                for (int j = 0; j < SceneManager.sceneCount; j++)
+                {
+                    Scene scene = SceneManager.GetSceneAt(i);
+                    if (scene.path == sceneSO.scenePath)
+                    {
+                        return;
+                    }
+                    else if (j == SceneManager.sceneCount - 1)
+                    {
+                        scenesToLoad.Add(sceneSO);
+                        IsEditorInitializationMode = true;
+                    }
+                }
+            }
+
+            foreach (GameSceneSO sceneSO in scenesToLoad)
+            {
+                SceneManager.LoadScene(sceneSO.scenePath, LoadSceneMode.Additive);
             }
         }
 #endif

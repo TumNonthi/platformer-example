@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17bbb73ef357444419ac2f547f687ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManagerSceneSO: {fileID: 11400000, guid: 860f099cd1e2cec44837e70010d185e0, type: 2}
+  ManagerScenes:
+  - {fileID: 11400000, guid: 860f099cd1e2cec44837e70010d185e0, type: 2}
 --- !u!114 &8319488049762741130
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,16 +6,24 @@ namespace MyPlatformer
 {
     public class LocationExit : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        [Header("Loading settings")]
+        [SerializeField] private GameSceneSO[] _locationsToLoad = default;
+        [SerializeField] private PathTakenManagerAnchor _pathTakenManagerAnchor = default;
+        [SerializeField] private PathSO _exitPath = default;
+        [SerializeField] private SceneLoaderAnchor _sceneLoaderAnchor = default;
 
+        protected virtual void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.gameObject.TryGetComponent<PlayerCharacter>(out PlayerCharacter pc))
+            {
+                UpdatePathTaken();
+                _sceneLoaderAnchor.GetReference().LoadLocation(_locationsToLoad);
+            }
         }
 
-        // Update is called once per frame
-        void Update()
+        private void UpdatePathTaken()
         {
-
+            _pathTakenManagerAnchor?.GetReference()?.SetPathTaken(_exitPath);
         }
     }
 }

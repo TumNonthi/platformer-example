@@ -46,4 +46,5 @@ MonoBehaviour:
   _spawnSystemAnchor: {fileID: 11400000, guid: d9ca9742b012d454d926223d232e4f2b, type: 2}
   _playerPrefab: {fileID: 1697812873471203694, guid: 1f441e21812e6e14584dca069241a612, type: 3}
   _playerCharacterAnchor: {fileID: 11400000, guid: 899d1c19634264c41b1fe4c35ca203d6, type: 2}
+  _pathTakenManagerAnchor: {fileID: 11400000, guid: 50cc76779fe5fa942938d95029adaf91, type: 2}
   _defaultSpawnPoint: {fileID: 0}

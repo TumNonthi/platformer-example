@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Managers.unity
     guid: bf7f633968c6e2d48ab3d43fc946562c
+  - enabled: 1
+    path: Assets/Scenes/GrassRoom.unity
+    guid: 89d4c6fe43367c8458907061821e130f
   m_configObjects: {}

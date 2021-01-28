@@ -10,6 +10,7 @@ namespace MyPlatformer
         [SerializeField] private PlayerSpawnSystemAnchor _spawnSystemAnchor = default;
         [SerializeField] private PlayerCharacter _playerPrefab;
         [SerializeField] private PlayerCharacterAnchor _playerCharacterAnchor = default;
+        [SerializeField] private PathTakenManagerAnchor _pathTakenManagerAnchor = default;
 
         [Header("Scene References")]
         [SerializeField] private LocationEntrance _defaultSpawnPoint;
@@ -33,8 +34,21 @@ namespace MyPlatformer
         public void SpawnPlayer()
         {
             _spawnPoints = FindObjectsOfType<LocationEntrance>();
+            LocationEntrance spawnPoint = _defaultSpawnPoint;
+            PathSO pathTaken = null;
+            pathTaken = _pathTakenManagerAnchor.GetReference()?.GetPathTaken();
+            if (pathTaken != null)
+            {
+                foreach (LocationEntrance aSpawnPoint in _spawnPoints)
+                {
+                    if (aSpawnPoint.EntrancePath == pathTaken)
+                    {
+                        spawnPoint = aSpawnPoint;
+                    }
+                }
+            }
 
-            Spawn(_defaultSpawnPoint);
+            Spawn(spawnPoint);
         }
 
         void Spawn(LocationEntrance spawnPoint)
