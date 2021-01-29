@@ -17,7 +17,7 @@ namespace MyPlatformer
             if (other.gameObject.TryGetComponent<PlayerCharacter>(out PlayerCharacter pc))
             {
                 UpdatePathTaken();
-                _sceneLoaderAnchor.GetReference().LoadLocation(_locationsToLoad);
+                _sceneLoaderAnchor.GetReference().LoadLocation(_locationsToLoad, true);
             }
         }
 
