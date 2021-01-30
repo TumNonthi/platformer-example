@@ -6,7 +6,7 @@ namespace MyPlatformer
 {
     public abstract class ConditionFunctionSO : ScriptableObject
     {
-        public ConditionFunction GetConditionFunction(GameObject target, Dictionary<ConditionFunctionSO, ConditionFunction> createdFunctionInstances)
+        public virtual ConditionFunction GetConditionFunction(GameObject target, Dictionary<ConditionFunctionSO, ConditionFunction> createdFunctionInstances)
         {
             ConditionFunction func;
             if (!createdFunctionInstances.TryGetValue(this, out func))

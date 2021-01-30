@@ -9,6 +9,13 @@ namespace MyPlatformer
     {
         [SerializeField] private ConditionStackEntry[] conditionStackEntries;
 
+        public override ConditionFunction GetConditionFunction(GameObject target, Dictionary<ConditionFunctionSO, ConditionFunction> createdFunctionInstances)
+        {
+            MultipleConditionFunction func = (MultipleConditionFunction)base.GetConditionFunction(target, createdFunctionInstances);
+            func.createdFunctionInstances = createdFunctionInstances;
+            return func;
+        }
+
         protected override ConditionFunction CreateFunction()
         {
             return new MultipleConditionFunction(conditionStackEntries);
@@ -17,6 +24,8 @@ namespace MyPlatformer
 
     public class MultipleConditionFunction : ConditionFunction
     {
+        public Dictionary<ConditionFunctionSO, ConditionFunction> createdFunctionInstances;
+
         private ConditionStackEntry[] _conditionStackEntries;
 
         public MultipleConditionFunction(ConditionStackEntry[] conditionStackEntries)
@@ -34,11 +43,11 @@ namespace MyPlatformer
                 switch (logicalOperator)
                 {
                     case LogicalOperator.And:
-                        result = result && entry.condition.EvaluateResult(Target);
+                        result = result && entry.condition.EvaluateResult(Target, createdFunctionInstances);
                         break;
 
                     case LogicalOperator.Or:
-                        result = result || entry.condition.EvaluateResult(Target);
+                        result = result || entry.condition.EvaluateResult(Target, createdFunctionInstances);
                         break;
                 }
 
