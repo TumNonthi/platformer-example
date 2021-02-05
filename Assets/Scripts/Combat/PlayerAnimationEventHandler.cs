@@ -21,6 +21,7 @@ namespace MyPlatformer
         public void FireMusket()
         {
             HitscanPoint hitscanPoint = _musketHitscanPointPool.Request();
+            hitscanPoint.transform.rotation = _musketFirePoint.rotation;
             hitscanPoint.transform.position = _musketFirePoint.position;
             hitscanPoint.Fire(_combatActor);
         }
