@@ -30,7 +30,7 @@ namespace MyPlatformer
 
                 for (int j = 0; j < SceneManager.sceneCount; j++)
                 {
-                    Scene scene = SceneManager.GetSceneAt(i);
+                    Scene scene = SceneManager.GetSceneAt(j);
                     if (scene.path == sceneSO.scenePath)
                     {
                         return;
