@@ -12,7 +12,8 @@ namespace MyPlatformer
         [SerializeField] private float _range = 20f;
         [SerializeField] private LayerMask _layer;
         [SerializeField] private bool _pierce;
-        
+
+        [SerializeField] private BulletTracer _bulletTracer;
         [SerializeField] private VisualEffectFactorySO _impactVfxFactorySO;
         [SerializeField] private int _impactVfxPoolSize = 1;
 
@@ -58,11 +59,22 @@ namespace MyPlatformer
 
             List<Vector3> targetPositions = new List<Vector3>();
 
+            // Initialize end position at the maximum range first.
+            Vector3 endPosition = transform.position + (transform.right * _range);
+
             foreach (var hit in _result)
             {
                 targetPositions.Add(hit.point);
             }
 
+            // if we hit something,
+            if (_result.Count > 0)
+            {
+                // set the end position at the last object we hit.
+                endPosition = _result[_result.Count - 1].point;
+            }
+
+            _bulletTracer?.CreateTracer(transform.position, endPosition);
             PlayImpactVfx(targetPositions);
 
             foreach (RaycastHit2D hit in _result)

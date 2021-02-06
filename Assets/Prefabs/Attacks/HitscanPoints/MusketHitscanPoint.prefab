@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tracerRenderer: {fileID: 4336289597348429923}
-  _tracerDuration: 0.02
+  _tracerDuration: 0.2
 --- !u!1 &8964161567335102115
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,5 +195,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _pierce: 0
+  _bulletTracer: {fileID: 5245422211792359035}
   _impactVfxFactorySO: {fileID: 11400000, guid: effe16858022eee44a8e1bf36e49867a, type: 2}
   _impactVfxPoolSize: 1

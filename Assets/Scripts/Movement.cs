@@ -23,6 +23,7 @@ namespace MyPlatformer
         [SerializeField] private float coyoteTime = 0.1f;
         [SerializeField] private int maxNumberOfJumps = 1;
         [SerializeField] private float dropThroughTime = 0.25f;
+        [SerializeField] Condition jumpCondition;
 
         [Space]
         [Header("References")]
@@ -206,7 +207,7 @@ namespace MyPlatformer
 
         bool CanJump()
         {
-            return numberOfJumps > 0;
+            return numberOfJumps > 0 && jumpCondition.EvaluateResult(gameObject);
         }
 
         public void QueueJump()
