@@ -9,6 +9,8 @@ namespace MyPlatformer
         [SerializeField] ParticleSystem groundImpactParticleSystem;
         [SerializeField] Movement characterMovement;
 
+        [SerializeField] float threshold = 1f;
+
         private void OnEnable()
         {
             characterMovement.OnHitGround += HandleHitGround;
@@ -22,10 +24,13 @@ namespace MyPlatformer
             }
         }
 
-        void HandleHitGround()
+        void HandleHitGround(float verticalVelocity)
         {
-            groundImpactParticleSystem.Stop();
-            groundImpactParticleSystem.Play();
+            if (Mathf.Abs(verticalVelocity) >= threshold)
+            {
+                groundImpactParticleSystem.Stop();
+                groundImpactParticleSystem.Play();
+            }
         }
     }
 }

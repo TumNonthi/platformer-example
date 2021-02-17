@@ -6,7 +6,7 @@ namespace MyPlatformer
 {
     public class Movement : MonoBehaviour
     {
-        public delegate void HitGroundDelegate();
+        public delegate void HitGroundDelegate(float verticalVelocity);
 
         public event HitGroundDelegate OnHitGround;
         
@@ -149,7 +149,7 @@ namespace MyPlatformer
                     hitGroundThisFrame = true;
                     if (!wasGrounded)
                     {
-                        OnHitGround?.Invoke();
+                        OnHitGround?.Invoke(rb.velocity.y);
                     }
                 }
 
