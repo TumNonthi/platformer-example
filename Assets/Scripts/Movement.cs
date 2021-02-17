@@ -178,6 +178,10 @@ namespace MyPlatformer
         void Walk(float direction)
         {
             direction = Mathf.Clamp(direction, -1f, 1f);
+            if (direction != 0f)
+            {
+                direction /= Mathf.Abs(direction);
+            }
 
             if (characterCollision.OnGround && !isJumping)
             {

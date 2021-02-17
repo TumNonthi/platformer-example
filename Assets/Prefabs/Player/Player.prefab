@@ -9920,6 +9920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundImpactParticleSystem: {fileID: 2594580959845476097}
   characterMovement: {fileID: 2594580959255407123}
+  threshold: 1
 --- !u!1 &2594580960118882538
 GameObject:
   m_ObjectHideFlags: 0
