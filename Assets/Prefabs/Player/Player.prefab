@@ -145,20 +145,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a9747a5c9f3da649b70c5c26319e4de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  horizontalMovementProfile: {fileID: 11400000, guid: 6aa77ac0d51dac34fa492b4bf5f08216, type: 2}
   walkCondition:
     leftFunctionSO: {fileID: 11400000, guid: 3f650e14d9f15964f9de13165ce8ba64, type: 2}
     comparison: 2
     rightFunctionSO: {fileID: 11400000, guid: cf7b7f3605e73304c8dac94a8cddcabc, type: 2}
     defaultValue: 0
     defaultTarget: {fileID: 0}
-  jumpForce: 12
-  cancelJumpMult: 0
-  jumpMinTime: 0.1
-  jumpBufferTime: 0.2
-  coyoteTime: 0.1
-  maxNumberOfJumps: 1
-  dropThroughTime: 0.25
+  jumpProfile: {fileID: 11400000, guid: 4f57b120892d623429ef8e33b36c0695, type: 2}
   jumpCondition:
     leftFunctionSO: {fileID: 11400000, guid: 3d23c3e5274afb14599202f652bb8a83, type: 2}
     comparison: 2

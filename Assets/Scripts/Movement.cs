@@ -9,20 +9,14 @@ namespace MyPlatformer
         public delegate void HitGroundDelegate(float verticalVelocity);
 
         public event HitGroundDelegate OnHitGround;
-        
+
         [Header("Horizontal Movement")]
-        [SerializeField] private float speed = 10f;
+        [SerializeField] private HorizontalMovementProfileSO horizontalMovementProfile;
         [SerializeField] private Condition walkCondition;
 
         [Space]
         [Header("Jumping")]
-        [SerializeField] private float jumpForce = 12f;
-        [SerializeField] private float cancelJumpMult = 0f;
-        [SerializeField] private float jumpMinTime = 0.1f;
-        [SerializeField] private float jumpBufferTime = 0.2f;
-        [SerializeField] private float coyoteTime = 0.1f;
-        [SerializeField] private int maxNumberOfJumps = 1;
-        [SerializeField] private float dropThroughTime = 0.25f;
+        [SerializeField] private JumpProfileSO jumpProfile;
         [SerializeField] private Condition jumpCondition;
 
         [Space]
@@ -94,7 +88,7 @@ namespace MyPlatformer
 
             if (jumpQueued)
             {
-                if (Time.time - jumpQueueTime <= jumpBufferTime)
+                if (Time.time - jumpQueueTime <= jumpProfile.JumpBufferTime)
                 {
                     if (CanJump())
                     {
@@ -155,7 +149,7 @@ namespace MyPlatformer
 
                 if (!isJumping)
                 {
-                    numberOfJumps = maxNumberOfJumps;
+                    numberOfJumps = jumpProfile.MaxNumberOfJumps;
                 }
 
                 notGroundedTimer = 0f;
@@ -163,9 +157,9 @@ namespace MyPlatformer
             else
             {
                 notGroundedTimer += dt;
-                if (notGroundedTimer > coyoteTime)
+                if (notGroundedTimer > jumpProfile.CoyoteTime)
                 {
-                    if (numberOfJumps == maxNumberOfJumps)
+                    if (numberOfJumps == jumpProfile.MaxNumberOfJumps)
                     {
                         numberOfJumps--;
                     }
@@ -185,11 +179,11 @@ namespace MyPlatformer
 
             if (characterCollision.OnGround && !isJumping)
             {
-                rb.velocity = new Vector2(direction * speed, Mathf.Min(0f, rb.velocity.y));
+                rb.velocity = new Vector2(direction * horizontalMovementProfile.Speed, Mathf.Min(0f, rb.velocity.y));
             }
             else
             {
-                rb.velocity = new Vector2(direction * speed, rb.velocity.y);
+                rb.velocity = new Vector2(direction * horizontalMovementProfile.Speed, rb.velocity.y);
             }
         }
 
@@ -201,7 +195,7 @@ namespace MyPlatformer
             jumpCanceled = false;
 
             rb.velocity = new Vector2(rb.velocity.x, 0f);
-            rb.velocity += dir * jumpForce;
+            rb.velocity += dir * jumpProfile.JumpForce;
         }
 
         void UpdateJumpTimer(float dt)
@@ -214,12 +208,12 @@ namespace MyPlatformer
 
         void CheckJumpCancel()
         {
-            if (jumpCancelQueued && jumpTimer >= jumpMinTime && !jumpCanceled)
+            if (jumpCancelQueued && jumpTimer >= jumpProfile.JumpMinTime && !jumpCanceled)
             {
                 jumpCanceled = true;
                 if (rb.velocity.y > 0f && isJumping)
                 {
-                    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * cancelJumpMult);
+                    rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * jumpProfile.CancelJumpMult);
                 }
             }
         }
@@ -244,7 +238,7 @@ namespace MyPlatformer
         public void DropThrough()
         {
             characterCollision.IgnoreOneWayPlatformAtFeet();
-            dropThroughTimer = dropThroughTime;
+            dropThroughTimer = jumpProfile.DropThroughTime;
         }
 
         void ResetDropThrough()
